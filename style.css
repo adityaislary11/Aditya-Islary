@@ -764,252 +764,242 @@ letter-spacing: 0.1em;
 }
 
 /* =========================================
-ESMITRA VISUAL
+   ESMITRA SPIDER-WEB NETWORK
 ========================================= */
 
-.esmitra-visual {
-background:
-radial-gradient(
-circle at 50% 50%,
-rgba(56, 189, 248, 0.12),
-transparent 30%
-),
-radial-gradient(
-circle at 15% 80%,
-rgba(30, 58, 138, 0.18),
-transparent 30%
-),
-#07111d;
-}
-
 .connectivity-grid {
-position: absolute;
-inset: 0;
-opacity: 0.65;
-background-image:
-linear-gradient(
-rgba(56, 189, 248, 0.045) 1px,
-transparent 1px
-),
-linear-gradient(
-90deg,
-rgba(56, 189, 248, 0.045) 1px,
-transparent 1px
-);
-background-size: 45px 45px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 560px;
+    height: 560px;
+    z-index: 2;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    opacity: 0.65;
+    pointer-events: none;
+
+    background:
+        repeating-radial-gradient(
+            circle at center,
+            transparent 0,
+            transparent 43px,
+            rgba(56, 189, 248, 0.09) 44px,
+            transparent 45px
+        ),
+        repeating-conic-gradient(
+            from 0deg,
+            rgba(56, 189, 248, 0.08) 0deg,
+            rgba(56, 189, 248, 0.08) 1deg,
+            transparent 1deg,
+            transparent 15deg
+        );
+
+    -webkit-mask-image: radial-gradient(
+        circle,
+        black 0%,
+        black 72%,
+        transparent 78%
+    );
+
+    mask-image: radial-gradient(
+        circle,
+        black 0%,
+        black 72%,
+        transparent 78%
+    );
 }
 
-.esmitra-core {
-position: absolute;
-top: 50%;
-left: 50%;
-z-index: 12;
-width: 150px;
-height: 150px;
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-transform: translate(-50%, -50%);
-border: 1px solid rgba(56, 189, 248, 0.4);
-border-radius: 50%;
-background:
-radial-gradient(
-circle,
-rgba(56, 189, 248, 0.15),
-rgba(8, 17, 29, 0.95) 68%
-);
-box-shadow:
-0 0 35px rgba(56, 189, 248, 0.12),
-inset 0 0 30px rgba(56, 189, 248, 0.05);
+
+/* Outer web ring */
+
+.connectivity-grid::before {
+    content: "";
+    position: absolute;
+    inset: 42px;
+    border: 1px solid rgba(56, 189, 248, 0.13);
+    border-radius: 50%;
+    box-shadow:
+        0 0 30px rgba(56, 189, 248, 0.025),
+        inset 0 0 30px rgba(56, 189, 248, 0.025);
 }
 
-.core-ring {
-position: absolute;
-inset: -12px;
-border: 1px solid rgba(56, 189, 248, 0.14);
-border-radius: 50%;
-animation: esmitraPulse 3s ease-in-out infinite;
+
+/* Inner web */
+
+.connectivity-grid::after {
+    content: "";
+    position: absolute;
+    inset: 115px;
+    border: 1px solid rgba(56, 189, 248, 0.12);
+    border-radius: 50%;
+    box-shadow:
+        0 0 25px rgba(56, 189, 248, 0.04),
+        inset 0 0 25px rgba(56, 189, 248, 0.04);
 }
 
-.core-logo {
-display: grid;
-width: 38px;
-height: 38px;
-margin-bottom: 7px;
-place-items: center;
-border: 1px solid var(--blue-border);
-border-radius: 9px;
-background: rgba(56, 189, 248, 0.1);
-color: var(--blue);
-font-family: var(--mono);
-font-size: 0.8rem;
+
+/* =========================================
+   WEB GLOW
+========================================= */
+
+.esmitra-visual::before {
+    z-index: 1;
+    opacity: 0.45;
+    background-image:
+        radial-gradient(
+            circle at 50% 50%,
+            rgba(56, 189, 248, 0.12),
+            transparent 2px
+        ),
+        radial-gradient(
+            circle at 50% 50%,
+            transparent 45%,
+            rgba(56, 189, 248, 0.025) 46%,
+            transparent 47%
+        );
 }
 
-.esmitra-core strong {
-color: var(--white);
-font-family: var(--mono);
-font-size: 0.85rem;
-letter-spacing: 0.08em;
-}
 
-.esmitra-core span {
-margin-top: 2px;
-color: var(--dim);
-font-family: var(--mono);
-font-size: 0.46rem;
-text-transform: uppercase;
-letter-spacing: 0.08em;
-}
-
-.network-node {
-position: absolute;
-z-index: 15;
-display: flex;
-align-items: center;
-gap: 9px;
-color: var(--text);
-font-family: var(--mono);
-font-size: 0.62rem;
-}
-
-.node-icon {
-display: grid;
-width: 40px;
-height: 40px;
-place-items: center;
-border: 1px solid var(--blue-border);
-border-radius: 50%;
-background: rgba(8, 17, 29, 0.95);
-color: var(--blue);
-box-shadow: 0 0 20px rgba(56, 189, 248, 0.08);
-}
-
-.citizen-node {
-top: 19%;
-left: 14%;
-}
-
-.volunteer-node {
-right: 10%;
-top: 20%;
-}
-
-.authority-node {
-right: 12%;
-bottom: 20%;
-}
+/* =========================================
+   CONNECTION LINES
+========================================= */
 
 .connection-line {
-position: absolute;
-z-index: 4;
-height: 1px;
-transform-origin: left center;
-background: linear-gradient(
-90deg,
-rgba(56, 189, 248, 0),
-rgba(56, 189, 248, 0.45),
-rgba(56, 189, 248, 0)
-);
-animation: connectionFlow 3s ease-in-out infinite;
+    z-index: 7;
+    height: 1px;
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(56, 189, 248, 0.15),
+            rgba(56, 189, 248, 0.7),
+            rgba(56, 189, 248, 0.15),
+            transparent
+        );
+    box-shadow:
+        0 0 8px rgba(56, 189, 248, 0.12);
 }
 
+
+/* Make the four main connections feel like
+   strands extending from the web */
+
 .line-1 {
-width: 190px;
-top: 36%;
-left: 26%;
-transform: rotate(18deg);
+    width: 190px;
+    top: 36%;
+    left: 26%;
+    transform: rotate(18deg);
 }
 
 .line-2 {
-width: 175px;
-top: 36%;
-left: 53%;
-transform: rotate(-22deg);
-animation-delay: 0.5s;
+    width: 175px;
+    top: 36%;
+    left: 53%;
+    transform: rotate(-22deg);
 }
 
 .line-3 {
-width: 185px;
-top: 61%;
-left: 53%;
-transform: rotate(21deg);
-animation-delay: 1s;
+    width: 185px;
+    top: 61%;
+    left: 53%;
+    transform: rotate(21deg);
 }
 
 .line-4 {
-width: 190px;
-top: 64%;
-left: 24%;
-transform: rotate(-22deg);
-animation-delay: 1.5s;
+    width: 190px;
+    top: 64%;
+    left: 24%;
+    transform: rotate(-22deg);
 }
 
-.incident-pill {
-position: absolute;
-z-index: 20;
-display: flex;
-align-items: center;
-gap: 7px;
-padding: 7px 10px;
-border: 1px solid var(--border);
-border-radius: 5px;
-background: rgba(5, 10, 18, 0.82);
-color: var(--muted);
-font-family: var(--mono);
-font-size: 0.52rem;
-backdrop-filter: blur(8px);
+
+/* =========================================
+   WEB NODES
+========================================= */
+
+.network-node {
+    z-index: 15;
 }
 
-.incident-1 {
-left: 10%;
-bottom: 25%;
+.node-icon {
+    position: relative;
+    box-shadow:
+        0 0 0 5px rgba(56, 189, 248, 0.025),
+        0 0 25px rgba(56, 189, 248, 0.12);
 }
 
-.incident-2 {
-top: 12%;
-right: 34%;
+
+/* Small glow behind every node */
+
+.node-icon::before {
+    content: "";
+    position: absolute;
+    inset: -7px;
+    border: 1px solid rgba(56, 189, 248, 0.08);
+    border-radius: 50%;
 }
 
-.incident-3 {
-right: 8%;
-bottom: 32%;
+
+/* =========================================
+   CENTRAL ESMITRA NODE
+========================================= */
+
+.esmitra-core {
+    z-index: 20;
+    box-shadow:
+        0 0 0 1px rgba(56, 189, 248, 0.08),
+        0 0 35px rgba(56, 189, 248, 0.14),
+        0 0 80px rgba(56, 189, 248, 0.05),
+        inset 0 0 35px rgba(56, 189, 248, 0.08);
 }
 
-.status-dot {
-width: 5px;
-height: 5px;
-border-radius: 50%;
-background: var(--blue);
-box-shadow: 0 0 8px rgba(56, 189, 248, 0.7);
+.esmitra-core::before {
+    content: "";
+    position: absolute;
+    inset: -25px;
+    border: 1px solid rgba(56, 189, 248, 0.06);
+    border-radius: 50%;
 }
 
-@keyframes esmitraPulse {
-0%,
-100% {
-transform: scale(1);
-opacity: 0.6;
+.esmitra-core::after {
+    content: "";
+    position: absolute;
+    inset: -42px;
+    border: 1px dashed rgba(56, 189, 248, 0.045);
+    border-radius: 50%;
+    animation: webRotate 24s linear infinite;
 }
 
-50% {
-    transform: scale(1.08);
-    opacity: 1;
+@keyframes webRotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }
 
+
+/* =========================================
+   WEB PULSE
+========================================= */
+
+.connectivity-grid {
+    animation: webBreath 5s ease-in-out infinite;
 }
 
-@keyframes connectionFlow {
-0%,
-100% {
-opacity: 0.35;
-}
+@keyframes webBreath {
+    0%,
+    100% {
+        opacity: 0.48;
+    }
 
-50% {
-    opacity: 1;
+    50% {
+        opacity: 0.72;
+    }
 }
-
-}
-
 /* =========================================
 CHESS VISUAL
 ========================================= */
