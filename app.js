@@ -1,127 +1,105 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const menuToggle = document.getElementById("menuToggle");
-    const navLinks = document.getElementById("navLinks");
+    const header = document.querySelector(".site-header");
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
     const navItems = document.querySelectorAll(".nav-link");
-    const backToTop = document.getElementById("backToTop");
+    const backToTop = document.querySelector(".back-to-top");
+    const revealElements = document.querySelectorAll(".reveal");
+    const sections = document.querySelectorAll("main section[id]");
     const currentYear = document.getElementById("currentYear");
 
-    /*
-     * GitHub
-     * Replace this with your actual GitHub profile URL.
-     */
-    const githubURL = "https://github.com/adityaislary11";
-
-    const githubLink = document.getElementById("githubLink");
-    const contactGithub = document.getElementById("contactGithub");
-
-    const projectGithubLinks = document.querySelectorAll(
-        ".github-project-link"
-    );
-
-    if (githubLink) {
-        githubLink.href = githubURL;
-    }
-
-    if (contactGithub) {
-        contactGithub.href = githubURL;
-    }
-
-    projectGithubLinks.forEach((link) => {
-        link.href = githubURL;
-        link.target = "_blank";
-        link.rel = "noopener noreferrer";
-    });
-
-
-    /*
-     * Current Year
-     */
+    const GITHUB_URL = "https://github.com/Adityislary11";
+    const ESMITRA_URL = "https://sentinel-link-orpin.vercel.app";
 
     if (currentYear) {
         currentYear.textContent = new Date().getFullYear();
     }
 
+    document.querySelectorAll("[data-github]").forEach((link) => {
+        link.href = GITHUB_URL;
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+    });
 
-    /*
-     * Mobile Navigation
-     */
+    document.querySelectorAll("[data-esmitra]").forEach((link) => {
+        link.href = ESMITRA_URL;
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+    });
+
+    function closeMenu() {
+        if (!navLinks || !menuToggle) return;
+
+        navLinks.classList.remove("open");
+        menuToggle.classList.remove("active");
+        menuToggle.setAttribute("aria-expanded", "false");
+        document.body.classList.remove("menu-open");
+    }
 
     if (menuToggle && navLinks) {
-        menuToggle.addEventListener("click", () => {
+        menuToggle.addEventListener("click", (event) => {
+            event.stopPropagation();
+
             const isOpen = navLinks.classList.toggle("open");
 
             menuToggle.classList.toggle("active", isOpen);
-            menuToggle.setAttribute("aria-expanded", String(isOpen));
-            document.body.classList.toggle("menu-open", isOpen);
-        });
+            menuToggle.setAttribute(
+                "aria-expanded",
+                String(isOpen)
+            );
 
+            document.body.classList.toggle(
+                "menu-open",
+                isOpen
+            );
+        });
 
         navItems.forEach((link) => {
             link.addEventListener("click", () => {
-                navLinks.classList.remove("open");
-                menuToggle.classList.remove("active");
-                menuToggle.setAttribute("aria-expanded", "false");
-                document.body.classList.remove("menu-open");
+                closeMenu();
             });
         });
 
-
         document.addEventListener("click", (event) => {
-            const clickedInsideNav =
-                navLinks.contains(event.target) ||
-                menuToggle.contains(event.target);
-
-            if (!clickedInsideNav) {
-                navLinks.classList.remove("open");
-                menuToggle.classList.remove("active");
-                menuToggle.setAttribute("aria-expanded", "false");
-                document.body.classList.remove("menu-open");
+            if (
+                !navLinks.contains(event.target) &&
+                !menuToggle.contains(event.target)
+            ) {
+                closeMenu();
             }
         });
     }
 
-
-    /*
-     * Header Scroll Effect
-     */
-
-    const header = document.querySelector(".site-header");
-
     function updateHeader() {
         if (!header) return;
 
-        if (window.scrollY > 40) {
-            header.classList.add("scrolled");
-        } else {
-            header.classList.remove("scrolled");
-        }
+        header.classList.toggle(
+            "scrolled",
+            window.scrollY > 40
+        );
     }
 
-    window.addEventListener("scroll", updateHeader, {
-        passive: true
-    });
+    window.addEventListener(
+        "scroll",
+        updateHeader,
+        { passive: true }
+    );
 
     updateHeader();
 
-
-    /*
-     * Active Navigation Link
-     */
-
-    const sections = document.querySelectorAll("main section[id]");
-
     function updateActiveNavigation() {
-        const scrollPosition = window.scrollY + 180;
+        if (!sections.length || !navItems.length) return;
 
+        const position = window.scrollY + 220;
         let currentSection = "home";
 
         sections.forEach((section) => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.offsetHeight;
+            const top = section.offsetTop;
+            const bottom = top + section.offsetHeight;
 
             if (
-                scrollPosition >= sectionTop &&
-                scrollPosition < sectionTop + sectionHeight
+                position >= top &&
+                position < bottom
             ) {
                 currentSection = section.id;
             }
@@ -137,18 +115,13 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    window.addEventListener("scroll", updateActiveNavigation, {
-        passive: true
-    });
+    window.addEventListener(
+        "scroll",
+        updateActiveNavigation,
+        { passive: true }
+    );
 
     updateActiveNavigation();
-
-
-    /*
-     * Scroll Reveal Animation
-     */
-
-    const revealElements = document.querySelectorAll(".reveal");
 
     if ("IntersectionObserver" in window) {
         const revealObserver = new IntersectionObserver(
@@ -162,7 +135,7 @@ document.addEventListener("DOMContentLoaded", () => {
             },
             {
                 threshold: 0.12,
-                rootMargin: "0px 0px -50px 0px"
+                rootMargin: "0px 0px -40px 0px"
             }
         );
 
@@ -175,42 +148,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-
-    /*
-     * Back To Top
-     */
-
-    function updateBackToTop() {
-        if (!backToTop) return;
-
-        if (window.scrollY > 600) {
-            backToTop.classList.add("show");
-        } else {
-            backToTop.classList.remove("show");
-        }
-    }
-
-    window.addEventListener("scroll", updateBackToTop, {
-        passive: true
-    });
-
-    updateBackToTop();
-
-
-    if (backToTop) {
-        backToTop.addEventListener("click", () => {
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
-            });
-        });
-    }
-
-
-    /*
-     * Smooth Scrolling
-     */
-
     document.querySelectorAll('a[href^="#"]').forEach((link) => {
         link.addEventListener("click", (event) => {
             const targetID = link.getAttribute("href");
@@ -218,7 +155,7 @@ document.addEventListener("DOMContentLoaded", () => {
             if (
                 !targetID ||
                 targetID === "#" ||
-                targetID.length <= 1
+                targetID.length < 2
             ) {
                 return;
             }
@@ -237,7 +174,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 target.getBoundingClientRect().top +
                 window.scrollY -
                 headerHeight -
-                15;
+                20;
 
             window.scrollTo({
                 top: targetPosition,
@@ -246,24 +183,58 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
+    function updateBackToTop() {
+        if (!backToTop) return;
 
-    /*
-     * Project Card Interaction
-     */
+        backToTop.classList.toggle(
+            "show",
+            window.scrollY > 600
+        );
+    }
 
-    const projectCards = document.querySelectorAll(".project-card");
+    window.addEventListener(
+        "scroll",
+        updateBackToTop,
+        { passive: true }
+    );
+
+    updateBackToTop();
+
+    if (backToTop) {
+        backToTop.addEventListener("click", () => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+    }
+
+    const projectCards = document.querySelectorAll(
+        ".project-card"
+    );
 
     projectCards.forEach((card) => {
         card.addEventListener("mousemove", (event) => {
-            if (window.innerWidth < 900) return;
+            if (
+                window.innerWidth < 900 ||
+                document.documentElement.classList.contains(
+                    "reduce-motion"
+                )
+            ) {
+                return;
+            }
 
             const rect = card.getBoundingClientRect();
 
             const x =
-                ((event.clientX - rect.left) / rect.width - 0.5) * 4;
+                ((event.clientX - rect.left) /
+                    rect.width -
+                    0.5) * 4;
 
             const y =
-                ((event.clientY - rect.top) / rect.height - 0.5) * -4;
+                ((event.clientY - rect.top) /
+                    rect.height -
+                    0.5) * -4;
 
             card.style.transform =
                 `perspective(1000px) rotateX(${y}deg) rotateY(${x}deg) translateY(-4px)`;
@@ -274,120 +245,80 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
+    const heroSystem = document.querySelector(".hero-system");
 
-    /*
-     * Floating Tech Chips
-     */
-
-    const floatingChips = document.querySelectorAll(".floating-chip");
-
-    floatingChips.forEach((chip, index) => {
-        chip.style.animationDelay = `${index * 0.6}s`;
-    });
-
-
-    /*
-     * Code Card Cursor
-     */
-
-    const codeCursor = document.querySelector(".code-cursor");
-
-    if (codeCursor) {
-        let visible = true;
-
-        setInterval(() => {
-            visible = !visible;
-            codeCursor.style.opacity = visible ? "1" : "0";
-        }, 500);
-    }
-
-
-    /*
-     * Small Parallax Effect
-     */
-
-    const heroVisual = document.querySelector(".hero-visual");
-
-    if (heroVisual) {
+    if (heroSystem) {
         window.addEventListener(
             "mousemove",
             (event) => {
-                if (window.innerWidth < 900) return;
+                if (
+                    window.innerWidth < 900 ||
+                    document.documentElement.classList.contains(
+                        "reduce-motion"
+                    )
+                ) {
+                    return;
+                }
 
                 const x =
-                    (event.clientX / window.innerWidth - 0.5) * 8;
+                    (event.clientX /
+                        window.innerWidth -
+                        0.5) * 8;
 
                 const y =
-                    (event.clientY / window.innerHeight - 0.5) * 8;
+                    (event.clientY /
+                        window.innerHeight -
+                        0.5) * 8;
 
-                heroVisual.style.transform =
-                    `translate(${x}px, ${y}px)`;
+                heroSystem.style.transform =
+                    `translate3d(${x}px, ${y}px, 0)`;
             },
-            {
-                passive: true
-            }
+            { passive: true }
         );
     }
 
-
-    /*
-     * Prevent Empty Project Links
-     *
-     * Links with href="#" that are not GitHub links are prevented
-     * from jumping to the top until real project URLs are added.
-     */
-
-    const placeholderLinks = document.querySelectorAll(
-        '.project-link[href="#"]'
-    );
-
-    placeholderLinks.forEach((link) => {
-        if (link.classList.contains("github-project-link")) {
-            return;
-        }
-
-        link.addEventListener("click", (event) => {
-            event.preventDefault();
-        });
-    });
-
-
-    /*
-     * Keyboard Accessibility
-     */
-
     document.addEventListener("keydown", (event) => {
         if (event.key === "Escape") {
-            if (!navLinks || !menuToggle) return;
-
-            navLinks.classList.remove("open");
-            menuToggle.classList.remove("active");
-            menuToggle.setAttribute("aria-expanded", "false");
-            document.body.classList.remove("menu-open");
+            closeMenu();
         }
     });
-
-
-    /*
-     * Reduced Motion
-     */
 
     const reducedMotion = window.matchMedia(
         "(prefers-reduced-motion: reduce)"
     );
 
-    if (reducedMotion.matches) {
-        document.documentElement.classList.add("reduce-motion");
+    function handleReducedMotion() {
+        if (reducedMotion.matches) {
+            document.documentElement.classList.add(
+                "reduce-motion"
+            );
+        } else {
+            document.documentElement.classList.remove(
+                "reduce-motion"
+            );
+        }
     }
 
+    handleReducedMotion();
 
-    /*
-     * Console Signature
-     */
+    if (reducedMotion.addEventListener) {
+        reducedMotion.addEventListener(
+            "change",
+            handleReducedMotion
+        );
+    }
+
+    window.addEventListener("resize", () => {
+        if (window.innerWidth > 900) {
+            closeMenu();
+        }
+
+        updateActiveNavigation();
+    });
 
     console.log(
         "%cAditya Islary",
-        "font-size: 20px; font-weight: bold;"
+        "font-size: 20px; font-weight: 700;"
     );
 
     console.log(
