@@ -1,1512 +1,927 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
-
-    <meta
-        name="description"
-        content="Aditya Islary — student, freelancer, and builder."
-    >
-
-    <meta
-        name="author"
-        content="Aditya Islary"
-    >
-
-    <title>
-        Aditya Islary | Student • Freelancer • Builder
-    </title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aditya Islary — student, freelancer, and builder.">
+    <meta name="author" content="Aditya Islary">
+    <title>Aditya Islary | Student • Freelancer • Builder</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <div class="site-background">
-        <div class="background-grid"></div>
+<div class="site-background">
+    <div class="background-grid"></div>
+    <div class="background-glow glow-one"></div>
+    <div class="background-glow glow-two"></div>
+    <div class="background-glow glow-three"></div>
+</div>
 
-        <div class="background-glow glow-one"></div>
-        <div class="background-glow glow-two"></div>
-        <div class="background-glow glow-three"></div>
-    </div>
 
+<header class="site-header">
+    <nav class="navbar container">
 
-    <!-- HEADER -->
+        <a href="#home" class="brand" aria-label="Aditya Islary home">
+            <span class="brand-mark">AI</span>
+            <span class="brand-name">ADITYA<span>.</span></span>
+        </a>
 
-    <header class="site-header">
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+            type="button"
+            aria-label="Open navigation"
+            aria-expanded="false"
+            aria-controls="navLinks"
+        >
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
 
-        <nav class="navbar container">
+        <div class="nav-links" id="navLinks">
+
+            <a href="#home" class="nav-link active">Home</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#skills" class="nav-link">Skills</a>
+            <a href="#achievements" class="nav-link">Achievements</a>
+            <a href="#journey" class="nav-link">Journey</a>
+            <a href="#contact" class="nav-link">Contact</a>
 
             <a
-                href="#home"
-                class="brand"
-                aria-label="Aditya Islary home"
+                href="https://github.com/Adityislary11"
+                class="nav-github"
+                target="_blank"
+                rel="noopener noreferrer"
             >
-                <span class="brand-mark">
-                    AI
-                </span>
-
-                <span class="brand-name">
-                    ADITYA<span>.</span>
-                </span>
+                GitHub <span>↗</span>
             </a>
 
+        </div>
 
-            <button
-                class="menu-toggle"
-                id="menuToggle"
-                type="button"
-                aria-label="Open navigation"
-                aria-expanded="false"
-                aria-controls="navLinks"
-            >
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+    </nav>
+</header>
 
 
-            <div
-                class="nav-links"
-                id="navLinks"
-            >
+<main>
 
-                <a
-                    href="#home"
-                    class="nav-link active"
-                >
-                    Home
-                </a>
+<!-- HERO -->
 
-                <a
-                    href="#about"
-                    class="nav-link"
-                >
-                    About
-                </a>
+<section class="hero section" id="home">
+    <div class="hero-container container">
 
-                <a
-                    href="#projects"
-                    class="nav-link"
-                >
-                    Projects
-                </a>
+        <div class="hero-content reveal">
 
-                <a
-                    href="#skills"
-                    class="nav-link"
-                >
-                    Skills
-                </a>
+            <div class="hero-status">
+                <span class="status-indicator"></span>
+                <span class="status-line">AVAILABLE FOR PROJECTS</span>
+            </div>
 
-                <a
-                    href="#achievements"
-                    class="nav-link"
-                >
-                    Achievements
-                </a>
+            <p class="hero-kicker">
+                STUDENT • FREELANCER • BUILDER
+            </p>
 
-                <a
-                    href="#journey"
-                    class="nav-link"
-                >
-                    Journey
-                </a>
+            <h1 class="hero-title">
+                Building ideas
+                <span class="gradient-text">into reality.</span>
+            </h1>
 
-                <a
-                    href="#contact"
-                    class="nav-link"
-                >
-                    Contact
+            <p class="hero-description">
+                I'm <strong>Aditya Islary</strong>, a student and
+                technology enthusiast focused on building software,
+                exploring computer science, and turning ideas into
+                practical digital projects.
+            </p>
+
+            <div class="hero-actions">
+
+                <a href="#projects" class="button button-primary">
+                    Explore Projects <span>↗</span>
                 </a>
 
                 <a
                     href="https://github.com/Adityislary11"
-                    class="nav-github"
+                    class="button button-ghost"
                     target="_blank"
                     rel="noopener noreferrer"
-                    data-github
                 >
+                    <span class="github-symbol">◉</span>
                     GitHub
-                    <span>↗</span>
                 </a>
 
             </div>
 
-        </nav>
+            <div class="hero-details">
 
-    </header>
+                <div class="hero-detail">
+                    <span class="detail-label">BASE</span>
+                    <span class="detail-value">India</span>
+                </div>
+
+                <div class="hero-detail">
+                    <span class="detail-label">FOCUS</span>
+                    <span class="detail-value">Technology</span>
+                </div>
+
+                <div class="hero-detail">
+                    <span class="detail-label">STATUS</span>
+                    <span class="detail-value">Learning & Building</span>
+                </div>
+
+            </div>
+
+        </div>
 
 
-    <main>
+        <div class="hero-system reveal reveal-delay">
+
+            <div class="system-card">
+
+                <div class="system-topbar">
+
+                    <div class="system-window-controls">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <span class="system-title">
+                        ADITYA_SYSTEM
+                    </span>
+
+                    <span class="system-status">
+                        ONLINE
+                    </span>
+
+                </div>
 
 
-        <!-- HERO -->
+                <div class="system-content">
 
-        <section
-            class="hero section"
-            id="home"
-        >
+                    <div class="system-orbit orbit-one"></div>
+                    <div class="system-orbit orbit-two"></div>
+                    <div class="system-orbit orbit-three"></div>
 
-            <div class="hero-container container">
+                    <div class="system-core">
+                        <div class="core-inner">AI</div>
+                        <div class="core-ring"></div>
+                    </div>
 
-                <div class="hero-content reveal">
+                    <div class="system-node node-one">WEB</div>
+                    <div class="system-node node-two">AI</div>
+                    <div class="system-node node-three">CS</div>
+                    <div class="system-node node-four">BUILD</div>
 
-                    <div class="hero-status">
+                    <div class="system-connection connection-one"></div>
+                    <div class="system-connection connection-two"></div>
+                    <div class="system-connection connection-three"></div>
+                    <div class="system-connection connection-four"></div>
 
-                        <span class="status-indicator"></span>
+                </div>
 
-                        <span class="status-line">
-                            AVAILABLE FOR PROJECTS
-                        </span>
+
+                <div class="system-footer">
+                    <span>SYSTEM STATUS</span>
+                    <span>LEARNING / BUILDING</span>
+                </div>
+
+            </div>
+
+
+            <div class="floating-data data-one">
+                HTML / CSS / JS
+            </div>
+
+            <div class="floating-data data-two">
+                ESMITRA
+            </div>
+
+            <div class="floating-data data-three">
+                PROBLEM SOLVING
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- TECHNOLOGY MARQUEE -->
+
+<div class="tech-marquee">
+    <div class="marquee-track">
+
+        <span>WEB DEVELOPMENT</span>
+        <span>•</span>
+        <span>COMPUTER SCIENCE</span>
+        <span>•</span>
+        <span>ARTIFICIAL INTELLIGENCE</span>
+        <span>•</span>
+        <span>PROBLEM SOLVING</span>
+        <span>•</span>
+        <span>SOFTWARE</span>
+        <span>•</span>
+
+        <span>WEB DEVELOPMENT</span>
+        <span>•</span>
+        <span>COMPUTER SCIENCE</span>
+        <span>•</span>
+        <span>ARTIFICIAL INTELLIGENCE</span>
+        <span>•</span>
+        <span>PROBLEM SOLVING</span>
+        <span>•</span>
+        <span>SOFTWARE</span>
+
+    </div>
+</div>
+
+
+<!-- ABOUT -->
+
+<section class="section" id="about">
+    <div class="container">
+
+        <div class="section-header reveal">
+
+            <span class="section-index">01</span>
+
+            <div>
+                <p class="section-kicker">ABOUT</p>
+
+                <h2>
+                    Curious by nature.
+                    <span class="gradient-text">
+                        Builder by choice.
+                    </span>
+                </h2>
+            </div>
+
+        </div>
+
+
+        <div class="about-layout">
+
+            <div class="about-main reveal">
+
+                <p class="about-lead">
+                    I'm a student and freelancer interested in
+                    technology, software development, artificial
+                    intelligence, and computer science.
+                </p>
+
+                <p>
+                    I enjoy learning by actually building things.
+                    From web interfaces to larger software ideas,
+                    my goal is to understand how systems work and
+                    gradually turn concepts into functional projects.
+                </p>
+
+                <p>
+                    I'm currently developing my technical foundation
+                    while experimenting with different areas of
+                    programming and problem solving.
+                </p>
+
+                <a href="#contact" class="text-link">
+                    Let's connect <span>→</span>
+                </a>
+
+            </div>
+
+
+            <div class="about-panel reveal reveal-delay">
+
+                <div class="panel-top">
+                    <span class="panel-dot"></span>
+                    <span class="panel-name">PROFILE</span>
+                </div>
+
+                <div class="panel-divider"></div>
+
+                <div class="panel-row">
+                    <span>NAME</span>
+                    <strong>Aditya Islary</strong>
+                </div>
+
+                <div class="panel-row">
+                    <span>ROLE</span>
+                    <strong>Student / Freelancer</strong>
+                </div>
+
+                <div class="panel-row">
+                    <span>INTEREST</span>
+                    <strong>Technology</strong>
+                </div>
+
+                <div class="panel-row">
+                    <span>APPROACH</span>
+                    <strong>Learn → Build → Improve</strong>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- PROJECTS -->
+
+<section class="section projects-section" id="projects">
+    <div class="container">
+
+        <div class="section-header reveal">
+
+            <span class="section-index">02</span>
+
+            <div>
+                <p class="section-kicker">SELECTED WORK</p>
+
+                <h2>
+                    Things I've
+                    <span class="gradient-text">built.</span>
+                </h2>
+            </div>
+
+        </div>
+
+
+        <div class="projects-grid">
+
+            <article class="project-card reveal">
+
+                <div class="project-card-header">
+                    <span class="project-number">01</span>
+                    <span class="project-status">LIVE</span>
+                </div>
+
+
+                <div class="project-visual esmitra-visual">
+
+                    <div class="esmitra-grid"></div>
+
+                    <div class="esmitra-radar">
+
+                        <div class="radar-ring"></div>
+                        <div class="radar-ring"></div>
+                        <div class="radar-ring"></div>
+
+                        <div class="radar-cross"></div>
+                        <div class="radar-center"></div>
+                        <div class="radar-point"></div>
 
                     </div>
 
+                    <span class="esmitra-label label-report">
+                        REPORT
+                    </span>
 
-                    <p class="hero-kicker">
-                        STUDENT • FREELANCER • BUILDER
+                    <span class="esmitra-label label-respond">
+                        RESPOND
+                    </span>
+
+                    <span class="esmitra-label label-resolve">
+                        RESOLVE
+                    </span>
+
+                </div>
+
+
+                <div class="project-card-body">
+
+                    <span class="project-category">
+                        INCIDENT RESPONSE PLATFORM
+                    </span>
+
+                    <h3>ESMITRA</h3>
+
+                    <p class="project-description">
+                        A smart incident reporting and management
+                        platform designed to connect citizens,
+                        volunteers, and authorities through a
+                        unified digital workflow.
                     </p>
 
 
-                    <h1 class="hero-title">
-
-                        Building ideas
-
-                        <span class="gradient-text">
-                            into reality.
-                        </span>
-
-                    </h1>
+                    <div class="project-tech">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                        <span>Firebase</span>
+                        <span>Vercel</span>
+                    </div>
 
 
-                    <p class="hero-description">
-                        I'm
-                        <strong>Aditya Islary</strong>,
-                        a student and technology enthusiast
-                        focused on building software,
-                        exploring computer science,
-                        and turning ideas into practical
-                        digital projects.
-                    </p>
-
-
-                    <div class="hero-actions">
+                    <div class="project-actions">
 
                         <a
-                            href="#projects"
-                            class="button button-primary"
+                            href="https://sentinel-link-orpin.vercel.app"
+                            class="project-button"
+                            target="_blank"
+                            rel="noopener noreferrer"
                         >
-                            Explore Projects
-                            <span>↗</span>
+                            View Project <span>↗</span>
                         </a>
-
 
                         <a
                             href="https://github.com/Adityislary11"
-                            class="button button-ghost"
+                            class="project-button"
                             target="_blank"
                             rel="noopener noreferrer"
-                            data-github
                         >
-                            <span class="github-symbol">
-                                ◉
-                            </span>
-
-                            GitHub
+                            GitHub <span>↗</span>
                         </a>
 
                     </div>
 
-
-                    <div class="hero-details">
-
-                        <div class="hero-detail">
-
-                            <span class="detail-label">
-                                BASE
-                            </span>
-
-                            <span class="detail-value">
-                                India
-                            </span>
-
-                        </div>
-
-
-                        <div class="hero-detail">
-
-                            <span class="detail-label">
-                                FOCUS
-                            </span>
-
-                            <span class="detail-value">
-                                Technology
-                            </span>
-
-                        </div>
-
-
-                        <div class="hero-detail">
-
-                            <span class="detail-label">
-                                STATUS
-                            </span>
-
-                            <span class="detail-value">
-                                Learning & Building
-                            </span>
-
-                        </div>
-
-                    </div>
-
                 </div>
 
+            </article>
 
-                <div
-                    class="hero-system reveal reveal-delay"
-                >
+        </div>
 
-                    <div class="system-card">
-
-                        <div class="system-topbar">
-
-                            <div class="system-window-controls">
-
-                                <span></span>
-                                <span></span>
-                                <span></span>
-
-                            </div>
-
-                            <span class="system-title">
-                                ADITYA_SYSTEM
-                            </span>
-
-                            <span class="system-status">
-                                ONLINE
-                            </span>
-
-                        </div>
+    </div>
+</section>
 
 
-                        <div class="system-content">
+<!-- SKILLS -->
 
-                            <div
-                                class="system-orbit orbit-one"
-                            ></div>
+<section class="section skills-section" id="skills">
+    <div class="container">
 
-                            <div
-                                class="system-orbit orbit-two"
-                            ></div>
+        <div class="section-header reveal">
 
-                            <div
-                                class="system-orbit orbit-three"
-                            ></div>
+            <span class="section-index">03</span>
 
+            <div>
+                <p class="section-kicker">CAPABILITIES</p>
 
-                            <div class="system-core">
-
-                                <div class="core-inner">
-                                    AI
-                                </div>
-
-                                <div class="core-ring"></div>
-
-                            </div>
-
-
-                            <div
-                                class="system-node node-one"
-                            >
-                                WEB
-                            </div>
-
-                            <div
-                                class="system-node node-two"
-                            >
-                                AI
-                            </div>
-
-                            <div
-                                class="system-node node-three"
-                            >
-                                CS
-                            </div>
-
-                            <div
-                                class="system-node node-four"
-                            >
-                                BUILD
-                            </div>
-
-
-                            <div
-                                class="system-connection connection-one"
-                            ></div>
-
-                            <div
-                                class="system-connection connection-two"
-                            ></div>
-
-                            <div
-                                class="system-connection connection-three"
-                            ></div>
-
-                            <div
-                                class="system-connection connection-four"
-                            ></div>
-
-                        </div>
-
-
-                        <div class="system-footer">
-
-                            <span>
-                                SYSTEM STATUS
-                            </span>
-
-                            <span>
-                                LEARNING / BUILDING
-                            </span>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="floating-data data-one">
-                        HTML / CSS / JS
-                    </div>
-
-                    <div class="floating-data data-two">
-                        ESMITRA
-                    </div>
-
-                    <div class="floating-data data-three">
-                        PROBLEM SOLVING
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- TECHNOLOGY MARQUEE -->
-
-        <div class="tech-marquee">
-
-            <div class="marquee-track">
-
-                <span>WEB DEVELOPMENT</span>
-                <span>•</span>
-
-                <span>COMPUTER SCIENCE</span>
-                <span>•</span>
-
-                <span>ARTIFICIAL INTELLIGENCE</span>
-                <span>•</span>
-
-                <span>PROBLEM SOLVING</span>
-                <span>•</span>
-
-                <span>SOFTWARE</span>
-                <span>•</span>
-
-                <span>WEB DEVELOPMENT</span>
-                <span>•</span>
-
-                <span>COMPUTER SCIENCE</span>
-                <span>•</span>
-
-                <span>ARTIFICIAL INTELLIGENCE</span>
-                <span>•</span>
-
-                <span>PROBLEM SOLVING</span>
-                <span>•</span>
-
-                <span>SOFTWARE</span>
-
+                <h2>
+                    Skills I'm
+                    <span class="gradient-text">developing.</span>
+                </h2>
             </div>
 
         </div>
 
 
-        <!-- ABOUT -->
+        <div class="skills-grid">
 
-        <section
-            class="section"
-            id="about"
-        >
+            <div class="skill-card reveal">
 
-            <div class="container">
-
-                <div class="section-header reveal">
-
-                    <span class="section-index">
-                        01
-                    </span>
-
-                    <div>
-
-                        <p class="section-kicker">
-                            ABOUT
-                        </p>
-
-                        <h2>
-                            Curious by nature.
-
-                            <span class="gradient-text">
-                                Builder by choice.
-                            </span>
-                        </h2>
-
-                    </div>
-
+                <div class="skill-top">
+                    <span>01</span>
+                    <span>WEB</span>
                 </div>
 
+                <h3>Web Development</h3>
 
-                <div class="about-layout">
+                <p>
+                    Building responsive interfaces and interactive
+                    websites with modern front-end technologies.
+                </p>
 
-                    <div class="about-main reveal">
+                <div class="skill-tags">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                </div>
 
-                        <p class="about-lead">
-                            I'm a student and freelancer
-                            interested in technology,
-                            software development,
-                            artificial intelligence,
-                            and computer science.
-                        </p>
-
-                        <p>
-                            I enjoy learning by actually
-                            building things. From web
-                            interfaces to larger software
-                            ideas, my goal is to understand
-                            how systems work and gradually
-                            turn concepts into functional
-                            projects.
-                        </p>
-
-                        <p>
-                            I'm currently developing my
-                            technical foundation while
-                            experimenting with different
-                            areas of programming and
-                            problem solving.
-                        </p>
-
-                        <a
-                            href="#contact"
-                            class="text-link"
-                        >
-                            Let's connect
-                            <span>→</span>
-                        </a>
-
-                    </div>
+            </div>
 
 
-                    <div
-                        class="about-panel reveal reveal-delay"
-                    >
+            <div class="skill-card reveal">
 
-                        <div class="panel-top">
+                <div class="skill-top">
+                    <span>02</span>
+                    <span>AI</span>
+                </div>
 
-                            <span class="panel-dot"></span>
+                <h3>Artificial Intelligence</h3>
 
-                            <span class="panel-name">
-                                PROFILE
-                            </span>
+                <p>
+                    Exploring AI concepts, applications, logical
+                    reasoning, and intelligent systems.
+                </p>
 
-                        </div>
+                <div class="skill-tags">
+                    <span>AI</span>
+                    <span>Logic</span>
+                    <span>Problem Solving</span>
+                </div>
 
-
-                        <div class="panel-divider"></div>
-
-
-                        <div class="panel-row">
-
-                            <span>
-                                NAME
-                            </span>
-
-                            <strong>
-                                Aditya Islary
-                            </strong>
-
-                        </div>
+            </div>
 
 
-                        <div class="panel-row">
+            <div class="skill-card reveal">
 
-                            <span>
-                                ROLE
-                            </span>
+                <div class="skill-top">
+                    <span>03</span>
+                    <span>CS</span>
+                </div>
 
-                            <strong>
-                                Student / Freelancer
-                            </strong>
+                <h3>Computer Science</h3>
 
-                        </div>
+                <p>
+                    Developing fundamentals in programming,
+                    algorithms, data structures, and
+                    computational thinking.
+                </p>
 
+                <div class="skill-tags">
+                    <span>Algorithms</span>
+                    <span>Programming</span>
+                    <span>CS</span>
+                </div>
 
-                        <div class="panel-row">
-
-                            <span>
-                                INTEREST
-                            </span>
-
-                            <strong>
-                                Technology
-                            </strong>
-
-                        </div>
+            </div>
 
 
-                        <div class="panel-row">
+            <div class="skill-card reveal">
 
-                            <span>
-                                APPROACH
-                            </span>
+                <div class="skill-top">
+                    <span>04</span>
+                    <span>TOOLS</span>
+                </div>
 
-                            <strong>
-                                Learn → Build → Improve
-                            </strong>
+                <h3>Development Tools</h3>
 
-                        </div>
+                <p>
+                    Working with version control, deployment
+                    platforms, development environments, and
+                    AI-assisted workflows.
+                </p>
 
-                    </div>
+                <div class="skill-tags">
+                    <span>Git</span>
+                    <span>GitHub</span>
+                    <span>Vercel</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ACHIEVEMENTS -->
+
+<section class="section" id="achievements">
+    <div class="container">
+
+        <div class="section-header reveal">
+
+            <span class="section-index">04</span>
+
+            <div>
+                <p class="section-kicker">RECOGNITION</p>
+
+                <h2>
+                    Achievements &
+                    <span class="gradient-text">
+                        milestones.
+                    </span>
+                </h2>
+            </div>
+
+        </div>
+
+
+        <!-- ANVESHANA -->
+
+        <div class="achievement-card reveal">
+
+            <div class="achievement-number">
+                01
+            </div>
+
+            <div class="achievement-main">
+
+                <div class="achievement-meta">
+                    2025–26 • BHUBANESWAR
+                </div>
+
+                <h3>
+                    Anveshana 2025–26
+                </h3>
+
+                <p>
+                    Third Prize — Regional Science & Engineering Fair
+                </p>
+
+                <div class="achievement-details">
+
+                    <span>
+                        Participant: Aditya Islary
+                    </span>
+
+                    <span>
+                        18–19 February 2026
+                    </span>
+
+                    <span>
+                        Bhubaneswar
+                    </span>
 
                 </div>
 
             </div>
 
-        </section>
+            <div class="achievement-badge">
+                3RD
+            </div>
+
+        </div>
 
 
-        <!-- PROJECTS -->
+        <!-- JIGNYASA -->
 
-        <section
-            class="section projects-section"
-            id="projects"
-        >
+        <div class="achievement-card reveal">
 
-            <div class="container">
+            <div class="achievement-number">
+                02
+            </div>
 
-                <div class="section-header reveal">
+            <div class="achievement-main">
 
-                    <span class="section-index">
-                        02
-                    </span>
-
-                    <div>
-
-                        <p class="section-kicker">
-                            SELECTED WORK
-                        </p>
-
-                        <h2>
-                            Things I've
-
-                            <span class="gradient-text">
-                                built.
-                            </span>
-                        </h2>
-
-                    </div>
-
+                <div class="achievement-meta">
+                    2025–26 • VIRTUAL
                 </div>
 
-
-                <div class="projects-grid">
-
-
-                    <!-- ESMITRA -->
-
-                    <article
-                        class="project-card reveal"
-                    >
-
-                        <div
-                            class="project-card-header"
-                        >
-
-                            <span class="project-number">
-                                01
-                            </span>
-
-                            <span class="project-status">
-                                LIVE
-                            </span>
-
-                        </div>
-
-
-                        <div
-                            class="project-visual
-                            esmitra-visual"
-                        >
-
-                            <div
-                                class="esmitra-grid"
-                            ></div>
-
-
-                            <div
-                                class="esmitra-radar"
-                            >
-
-                                <div
-                                    class="radar-ring"
-                                ></div>
-
-                                <div
-                                    class="radar-ring"
-                                ></div>
-
-                                <div
-                                    class="radar-ring"
-                                ></div>
-
-                                <div
-                                    class="radar-cross"
-                                ></div>
-
-                                <div
-                                    class="radar-center"
-                                ></div>
-
-                                <div
-                                    class="radar-point"
-                                ></div>
-
-                            </div>
-
-
-                            <span
-                                class="esmitra-label
-                                label-report"
-                            >
-                                REPORT
-                            </span>
-
-                            <span
-                                class="esmitra-label
-                                label-respond"
-                            >
-                                RESPOND
-                            </span>
-
-                            <span
-                                class="esmitra-label
-                                label-resolve"
-                            >
-                                RESOLVE
-                            </span>
-
-                        </div>
-
-
-                        <div class="project-card-body">
-
-                            <span class="project-category">
-                                INCIDENT RESPONSE PLATFORM
-                            </span>
-
-                            <h3>
-                                ESMITRA
-                            </h3>
-
-                            <p class="project-description">
-                                A smart incident reporting
-                                and management platform
-                                designed to connect citizens,
-                                volunteers, and authorities
-                                through a unified digital
-                                workflow.
-                            </p>
-
-
-                            <div class="project-tech">
-
-                                <span>HTML</span>
-                                <span>CSS</span>
-                                <span>JavaScript</span>
-                                <span>Firebase</span>
-                                <span>Vercel</span>
-
-                            </div>
-
-
-                            <div class="project-actions">
-
-                                <a
-                                    href="https://sentinel-link-orpin.vercel.app"
-                                    class="project-button"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    data-esmitra
-                                >
-                                    View Project
-                                    <span>↗</span>
-                                </a>
-
-                                <a
-                                    href="https://github.com/Adityislary11"
-                                    class="project-button"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    data-github
-                                >
-                                    GitHub
-                                    <span>↗</span>
-                                </a>
-
-                            </div>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- MORE PROJECTS -->
-
-                    <article
-                        class="project-card reveal reveal-delay"
-                    >
-
-                        <div
-                            class="project-card-header"
-                        >
-
-                            <span class="project-number">
-                                02
-                            </span>
-
-                            <span class="project-status">
-                                IN DEVELOPMENT
-                            </span>
-
-                        </div>
-
-
-                        <div
-                            class="project-visual
-                            chess-visual"
-                        >
-
-                            <div class="chess-board">
-
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-
-                            </div>
-
-
-                            <div class="chess-overlay">
-                                PROJECT 02
-                            </div>
-
-                        </div>
-
-
-                        <div class="project-card-body">
-
-                            <span class="project-category">
-                                SOFTWARE / ALGORITHMS
-                            </span>
-
-                            <h3>
-                                More Projects Coming Soon
-                            </h3>
-
-                            <p class="project-description">
-                                I'm continuing to experiment
-                                with programming, algorithms,
-                                and software engineering.
-                                More projects will be added
-                                as they reach a presentable
-                                stage.
-                            </p>
-
-
-                            <div class="project-tech">
-
-                                <span>RESEARCH</span>
-                                <span>BUILDING</span>
-                                <span>EXPERIMENTING</span>
-
-                            </div>
-
-                        </div>
-
-                    </article>
+                <h3>
+                    Jignyasa 2025–26
+                </h3>
+
+                <p>
+                    Second Prize — Regional Jignyasa 2025–26,
+                    a problem-solving innovative competition
+                    for students.
+                </p>
+
+                <div class="achievement-details">
+
+                    <span>
+                        Participant: Aditya Islary
+                    </span>
+
+                    <span>
+                        25–26 November 2025
+                    </span>
+
+                    <span>
+                        Conducted virtually
+                    </span>
 
                 </div>
 
             </div>
 
-        </section>
-
-
-        <!-- SKILLS -->
-
-        <section
-            class="section skills-section"
-            id="skills"
-        >
-
-            <div class="container">
-
-                <div class="section-header reveal">
-
-                    <span class="section-index">
-                        03
-                    </span>
-
-                    <div>
-
-                        <p class="section-kicker">
-                            CAPABILITIES
-                        </p>
-
-                        <h2>
-                            Skills I'm
-
-                            <span class="gradient-text">
-                                developing.
-                            </span>
-                        </h2>
-
-                    </div>
-
-                </div>
-
-
-                <div class="skills-grid">
-
-
-                    <div class="skill-card reveal">
-
-                        <div class="skill-top">
-
-                            <span>01</span>
-                            <span>WEB</span>
-
-                        </div>
-
-                        <h3>
-                            Web Development
-                        </h3>
-
-                        <p>
-                            Building responsive interfaces
-                            and interactive websites with
-                            modern front-end technologies.
-                        </p>
-
-                        <div class="skill-tags">
-
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>JavaScript</span>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="skill-card reveal">
-
-                        <div class="skill-top">
-
-                            <span>02</span>
-                            <span>AI</span>
-
-                        </div>
-
-                        <h3>
-                            Artificial Intelligence
-                        </h3>
-
-                        <p>
-                            Exploring AI concepts,
-                            applications, logical reasoning,
-                            and intelligent systems.
-                        </p>
-
-                        <div class="skill-tags">
-
-                            <span>AI</span>
-                            <span>Logic</span>
-                            <span>Problem Solving</span>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="skill-card reveal">
-
-                        <div class="skill-top">
-
-                            <span>03</span>
-                            <span>CS</span>
-
-                        </div>
-
-                        <h3>
-                            Computer Science
-                        </h3>
-
-                        <p>
-                            Developing fundamentals in
-                            programming, algorithms,
-                            data structures, and
-                            computational thinking.
-                        </p>
-
-                        <div class="skill-tags">
-
-                            <span>Algorithms</span>
-                            <span>Programming</span>
-                            <span>CS</span>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="skill-card reveal">
-
-                        <div class="skill-top">
-
-                            <span>04</span>
-                            <span>TOOLS</span>
-
-                        </div>
-
-                        <h3>
-                            Development Tools
-                        </h3>
-
-                        <p>
-                            Working with version control,
-                            deployment platforms,
-                            development environments,
-                            and AI-assisted workflows.
-                        </p>
-
-                        <div class="skill-tags">
-
-                            <span>Git</span>
-                            <span>GitHub</span>
-                            <span>Vercel</span>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
+            <div class="achievement-badge">
+                2ND
             </div>
 
-        </section>
+        </div>
+
+    </div>
+</section>
 
 
-        <!-- ACHIEVEMENTS -->
+<!-- JOURNEY -->
 
-        <section
-            class="section"
-            id="achievements"
-        >
+<section class="section" id="journey">
+    <div class="container">
 
-            <div class="container">
+        <div class="section-header reveal">
 
-                <div class="section-header reveal">
+            <span class="section-index">05</span>
 
-                    <span class="section-index">
-                        04
+            <div>
+                <p class="section-kicker">JOURNEY</p>
+
+                <h2>
+                    Learning in
+                    <span class="gradient-text">
+                        progress.
                     </span>
-
-                    <div>
-
-                        <p class="section-kicker">
-                            RECOGNITION
-                        </p>
-
-                        <h2>
-                            Achievements &
-
-                            <span class="gradient-text">
-                                milestones.
-                            </span>
-                        </h2>
-
-                    </div>
-
-                </div>
-
-
-                <!-- ANVESHANA -->
-
-                <div class="achievement-card reveal">
-
-                    <div class="achievement-number">
-                        01
-                    </div>
-
-
-                    <div class="achievement-main">
-
-                        <div class="achievement-meta">
-                            2025–26 • BHUBANESWAR
-                        </div>
-
-                        <h3>
-                            Anveshana 2025–26
-                        </h3>
-
-                        <p>
-                            Third Prize — Regional Science
-                            & Engineering Fair
-                        </p>
-
-
-                        <div class="achievement-details">
-
-                            <span>
-                                Participant: Aditya Islary
-                            </span>
-
-                            <span>
-                                18–19 February 2026
-                            </span>
-
-                            <span>
-                                Bhubaneswar
-                            </span>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="achievement-badge">
-                        3RD
-                    </div>
-
-                </div>
-
-
-                <!-- JIGNYASA -->
-
-                <div class="achievement-card reveal">
-
-                    <div class="achievement-number">
-                        02
-                    </div>
-
-
-                    <div class="achievement-main">
-
-                        <div class="achievement-meta">
-                            2025–26 • VIRTUAL
-                        </div>
-
-                        <h3>
-                            Jignyasa 2025–26
-                        </h3>
-
-                        <p>
-                            Second Prize — Regional Jignyasa
-                            2025–26, a problem-solving
-                            innovative competition for
-                            students.
-                        </p>
-
-
-                        <div class="achievement-details">
-
-                            <span>
-                                Participant: Aditya Islary
-                            </span>
-
-                            <span>
-                                25–26 November 2025
-                            </span>
-
-                            <span>
-                                Conducted virtually
-                            </span>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="achievement-badge">
-                        2ND
-                    </div>
-
-                </div>
-
+                </h2>
             </div>
 
-        </section>
+        </div>
 
 
-        <!-- JOURNEY -->
+        <div class="journey-track">
 
-        <section
-            class="section"
-            id="journey"
-        >
+            <div class="journey-line"></div>
 
-            <div class="container">
 
-                <div class="section-header reveal">
+            <div class="journey-item reveal">
 
-                    <span class="section-index">
-                        05
-                    </span>
-
-                    <div>
-
-                        <p class="section-kicker">
-                            JOURNEY
-                        </p>
-
-                        <h2>
-                            Learning in
-
-                            <span class="gradient-text">
-                                progress.
-                            </span>
-                        </h2>
-
-                    </div>
-
+                <div class="journey-marker">
+                    01
                 </div>
 
+                <div class="journey-content">
 
-                <div class="journey-track">
+                    <span>NOW</span>
 
-                    <div class="journey-line"></div>
-
-
-                    <div class="journey-item reveal">
-
-                        <div class="journey-marker">
-                            01
-                        </div>
-
-                        <div class="journey-content">
-
-                            <span>
-                                NOW
-                            </span>
-
-                            <h3>
-                                Building
-                            </h3>
-
-                            <p>
-                                Creating practical projects
-                                and improving my understanding
-                                of software development.
-                            </p>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="journey-item reveal">
-
-                        <div class="journey-marker">
-                            02
-                        </div>
-
-                        <div class="journey-content">
-
-                            <span>
-                                LEARNING
-                            </span>
-
-                            <h3>
-                                Exploring
-                            </h3>
-
-                            <p>
-                                Deepening my knowledge of
-                                computer science, AI,
-                                algorithms, and programming.
-                            </p>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="journey-item reveal">
-
-                        <div class="journey-marker">
-                            03
-                        </div>
-
-                        <div class="journey-content">
-
-                            <span>
-                                NEXT
-                            </span>
-
-                            <h3>
-                                Creating More
-                            </h3>
-
-                            <p>
-                                Turning new ideas into
-                                increasingly ambitious
-                                and useful projects.
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- CONTACT -->
-
-        <section
-            class="section contact-section"
-            id="contact"
-        >
-
-            <div class="contact-background"></div>
-
-
-            <div
-                class="container contact-layout"
-            >
-
-                <div class="contact-heading reveal">
-
-                    <p class="section-kicker">
-                        GET IN TOUCH
-                    </p>
-
-                    <h2>
-                        Have an idea?
-
-                        <span class="gradient-text">
-                            Let's talk.
-                        </span>
-                    </h2>
+                    <h3>Building</h3>
 
                     <p>
-                        Whether you're interested in a
-                        project, collaboration, or simply
-                        want to connect, you can reach me
-                        through the links below.
+                        Creating practical projects and improving
+                        my understanding of software development.
                     </p>
 
                 </div>
 
-
-                <div class="contact-links reveal">
-
-
-                    <a
-                        href="mailto:adityaislary11@gmail.com"
-                        class="contact-link"
-                    >
-
-                        <span class="contact-link-icon">
-                            @
-                        </span>
-
-                        <span>
-
-                            <small>
-                                EMAIL
-                            </small>
-
-                            adityaislary11@gmail.com
-
-                        </span>
-
-                        <span>
-                            ↗
-                        </span>
-
-                    </a>
+            </div>
 
 
-                    <a
-                        href="tel:+919401525404"
-                        class="contact-link"
-                    >
+            <div class="journey-item reveal">
 
-                        <span class="contact-link-icon">
-                            #
-                        </span>
+                <div class="journey-marker">
+                    02
+                </div>
 
-                        <span>
+                <div class="journey-content">
 
-                            <small>
-                                PHONE
-                            </small>
+                    <span>LEARNING</span>
 
-                            +91 94015 25404
+                    <h3>Exploring</h3>
 
-                        </span>
-
-                        <span>
-                            ↗
-                        </span>
-
-                    </a>
-
-
-                    <a
-                        href="https://github.com/Adityislary11"
-                        class="contact-link"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        data-github
-                    >
-
-                        <span class="contact-link-icon">
-                            ◉
-                        </span>
-
-                        <span>
-
-                            <small>
-                                GITHUB
-                            </small>
-
-                            Adityislary11
-
-                        </span>
-
-                        <span>
-                            ↗
-                        </span>
-
-                    </a>
+                    <p>
+                        Deepening my knowledge of computer science,
+                        AI, algorithms, and programming.
+                    </p>
 
                 </div>
 
             </div>
 
-        </section>
 
-    </main>
+            <div class="journey-item reveal">
 
+                <div class="journey-marker">
+                    03
+                </div>
 
-    <!-- FOOTER -->
+                <div class="journey-content">
 
-    <footer class="footer">
+                    <span>NEXT</span>
 
-        <div class="container footer-inner">
+                    <h3>Creating More</h3>
 
-            <div class="footer-brand">
+                    <p>
+                        Turning new ideas into increasingly ambitious
+                        and useful projects.
+                    </p>
 
-                <span class="brand-mark">
-                    AI
-                </span>
-
-                <span>
-                    Aditya Islary
-                </span>
-
-            </div>
-
-
-            <div class="footer-center">
-                Student • Freelancer • Builder
-            </div>
-
-
-            <div class="footer-right">
-
-                ©
-
-                <span id="currentYear"></span>
-
-                Aditya Islary
+                </div>
 
             </div>
 
         </div>
 
-    </footer>
+    </div>
+</section>
 
 
-    <!-- BACK TO TOP -->
+<!-- CONTACT -->
 
-    <button
-        class="back-to-top"
-        id="backToTop"
-        type="button"
-        aria-label="Back to top"
-    >
-        ↑
-    </button>
+<section class="section contact-section" id="contact">
+
+    <div class="contact-background"></div>
+
+    <div class="container contact-layout">
+
+        <div class="contact-heading reveal">
+
+            <p class="section-kicker">
+                GET IN TOUCH
+            </p>
+
+            <h2>
+                Have an idea?
+                <span class="gradient-text">
+                    Let's talk.
+                </span>
+            </h2>
+
+            <p>
+                Whether you're interested in a project,
+                collaboration, or simply want to connect,
+                you can reach me through the links below.
+            </p>
+
+        </div>
 
 
-    <script src="app.js"></script>
+        <div class="contact-links reveal">
+
+            <a
+                href="mailto:adityaislary11@gmail.com"
+                class="contact-link"
+            >
+                <span class="contact-link-icon">@</span>
+
+                <span>
+                    <small>EMAIL</small>
+                    adityaislary11@gmail.com
+                </span>
+
+                <span>↗</span>
+            </a>
+
+
+            <a
+                href="tel:+919401525404"
+                class="contact-link"
+            >
+                <span class="contact-link-icon">#</span>
+
+                <span>
+                    <small>PHONE</small>
+                    +91 94015 25404
+                </span>
+
+                <span>↗</span>
+            </a>
+
+
+            <a
+                href="https://github.com/Adityislary11"
+                class="contact-link"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <span class="contact-link-icon">◉</span>
+
+                <span>
+                    <small>GITHUB</small>
+                    Adityislary11
+                </span>
+
+                <span>↗</span>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+    <div class="container footer-inner">
+
+        <div class="footer-brand">
+
+            <span class="brand-mark">
+                AI
+            </span>
+
+            <span>
+                Aditya Islary
+            </span>
+
+        </div>
+
+
+        <div class="footer-center">
+            Student • Freelancer • Builder
+        </div>
+
+
+        <div class="footer-right">
+            © <span id="currentYear"></span>
+            Aditya Islary
+        </div>
+
+    </div>
+
+</footer>
+
+
+<button
+    class="back-to-top"
+    id="backToTop"
+    type="button"
+    aria-label="Back to top"
+>
+    ↑
+</button>
+
+
+<script src="app.js"></script>
 
 </body>
-
 </html>
