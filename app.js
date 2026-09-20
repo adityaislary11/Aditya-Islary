@@ -1,171 +1,437 @@
-/* =============================================
-   PORTFOLIO — app.js
-   Handles: navigation, scroll effects, reveal animations
-   ============================================= */
+"use strict";
 
-(function () {
-  'use strict';
 
-  /* ---- DOM refs ---- */
-  const nav       = document.getElementById('nav');
-  const navToggle = document.getElementById('navToggle');
-  const navLinks  = document.getElementById('navLinks');
-  const allLinks  = navLinks ? navLinks.querySelectorAll('.nav__link') : [];
+/* =========================================================
+   ADITYA ISLARY — PORTFOLIO
+   app.js
+========================================================= */
 
-  /* =============================================
-     NAVBAR — scroll state
-     ============================================= */
-  function onScroll() {
-    if (window.scrollY > 40) {
-      nav.classList.add('nav--scrolled');
+
+/* =========================================================
+   01. ELEMENTS
+========================================================= */
+
+const navbar = document.getElementById("navbar");
+const menuToggle = document.getElementById("menuToggle");
+const navMenu = document.getElementById("navMenu");
+
+const navLinks = document.querySelectorAll(".nav-link");
+const revealElements = document.querySelectorAll(".reveal");
+
+
+/* =========================================================
+   02. MOBILE NAVIGATION
+========================================================= */
+
+function openMenu() {
+    if (!menuToggle || !navMenu) return;
+
+    navMenu.classList.add("open");
+    menuToggle.classList.add("active");
+
+    menuToggle.setAttribute("aria-expanded", "true");
+    menuToggle.setAttribute("aria-label", "Close navigation");
+}
+
+
+function closeMenu() {
+    if (!menuToggle || !navMenu) return;
+
+    navMenu.classList.remove("open");
+    menuToggle.classList.remove("active");
+
+    menuToggle.setAttribute("aria-expanded", "false");
+    menuToggle.setAttribute("aria-label", "Open navigation");
+}
+
+
+function toggleMenu() {
+    if (!navMenu) return;
+
+    if (navMenu.classList.contains("open")) {
+        closeMenu();
     } else {
-      nav.classList.remove('nav--scrolled');
+        openMenu();
     }
-  }
+}
 
-  window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll();
 
-  /* =============================================
-     MOBILE NAVIGATION
-     ============================================= */
-  function openMenu() {
-    navLinks.classList.add('nav__links--open');
-    navToggle.setAttribute('aria-expanded', 'true');
-    navToggle.setAttribute('aria-label', 'Close navigation menu');
-    document.body.style.overflow = 'hidden';
-  }
+if (menuToggle) {
+    menuToggle.addEventListener("click", toggleMenu);
+}
 
-  function closeMenu() {
-    navLinks.classList.remove('nav__links--open');
-    navToggle.setAttribute('aria-expanded', 'false');
-    navToggle.setAttribute('aria-label', 'Open navigation menu');
-    document.body.style.overflow = '';
-  }
 
-  function toggleMenu() {
-    if (navToggle.getAttribute('aria-expanded') === 'true') {
-      closeMenu();
+/* Close menu when navigation link is clicked */
+
+navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+        closeMenu();
+    });
+});
+
+
+/* Close menu when clicking outside */
+
+document.addEventListener("click", (event) => {
+
+    if (!navMenu || !menuToggle) return;
+
+    const clickedInsideMenu = navMenu.contains(event.target);
+    const clickedToggle = menuToggle.contains(event.target);
+
+    if (
+        navMenu.classList.contains("open") &&
+        !clickedInsideMenu &&
+        !clickedToggle
+    ) {
+        closeMenu();
+    }
+});
+
+
+/* Close mobile menu when resizing to desktop */
+
+window.addEventListener("resize", () => {
+
+    if (window.innerWidth > 850) {
+        closeMenu();
+    }
+
+});
+
+
+/* =========================================================
+   03. NAVBAR SCROLL STATE
+========================================================= */
+
+function updateNavbar() {
+
+    if (!navbar) return;
+
+    if (window.scrollY > 30) {
+        navbar.classList.add("scrolled");
     } else {
-      openMenu();
-    }
-  }
-
-  if (navToggle) {
-    navToggle.addEventListener('click', toggleMenu);
-  }
-
-  /* Close menu when a link is clicked */
-  allLinks.forEach(function (link) {
-    link.addEventListener('click', function () {
-      closeMenu();
-    });
-  });
-
-  /* Close menu on Escape key */
-  document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape' && navToggle.getAttribute('aria-expanded') === 'true') {
-      closeMenu();
-      navToggle.focus();
-    }
-  });
-
-  /* Close menu when clicking outside on mobile */
-  navLinks.addEventListener('click', function (e) {
-    if (e.target === navLinks) {
-      closeMenu();
-    }
-  });
-
-  /* =============================================
-     SMOOTH SCROLL — anchor links
-     ============================================= */
-  document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
-    anchor.addEventListener('click', function (e) {
-      const id = anchor.getAttribute('href');
-      if (id === '#') return;
-      const target = document.querySelector(id);
-      if (!target) return;
-      e.preventDefault();
-
-      const navHeight = nav ? nav.offsetHeight : 0;
-      const top = target.getBoundingClientRect().top + window.scrollY - navHeight - 12;
-
-      window.scrollTo({ top: top, behavior: 'smooth' });
-    });
-  });
-
-  /* =============================================
-     SCROLL REVEAL
-     ============================================= */
-  var revealObserver;
-
-  function initReveal() {
-    /* Respect prefers-reduced-motion */
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      document.querySelectorAll('.reveal').forEach(function (el) {
-        el.classList.add('in-view');
-      });
-      return;
+        navbar.classList.remove("scrolled");
     }
 
-    if (!('IntersectionObserver' in window)) {
-      /* Fallback: show everything immediately */
-      document.querySelectorAll('.reveal').forEach(function (el) {
-        el.classList.add('in-view');
-      });
-      return;
-    }
+}
 
-    revealObserver = new IntersectionObserver(
-      function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('in-view');
-            revealObserver.unobserve(entry.target);
-          }
+updateNavbar();
+
+window.addEventListener(
+    "scroll",
+    updateNavbar,
+    { passive: true }
+);
+
+
+/* =========================================================
+   04. SCROLL REVEAL
+========================================================= */
+
+const revealObserver = new IntersectionObserver(
+    (entries, observer) => {
+
+        entries.forEach((entry) => {
+
+            if (!entry.isIntersecting) {
+                return;
+            }
+
+            entry.target.classList.add("visible");
+
+            observer.unobserve(entry.target);
+
         });
-      },
-      { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
+
+    },
+    {
+        threshold: 0.12,
+        rootMargin: "0px 0px -40px 0px"
+    }
+);
+
+
+revealElements.forEach((element) => {
+    revealObserver.observe(element);
+});
+
+
+/* =========================================================
+   05. ACTIVE NAVIGATION
+========================================================= */
+
+const sections = document.querySelectorAll("main section[id]");
+
+
+function updateActiveNavigation() {
+
+    const scrollPosition =
+        window.scrollY +
+        window.innerHeight * 0.35;
+
+    let currentSection = "";
+
+    sections.forEach((section) => {
+
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+
+        if (
+            scrollPosition >= sectionTop &&
+            scrollPosition < sectionTop + sectionHeight
+        ) {
+            currentSection = section.id;
+        }
+
+    });
+
+
+    navLinks.forEach((link) => {
+
+        const target =
+            link.getAttribute("href");
+
+        link.classList.toggle(
+            "active",
+            target === `#${currentSection}`
+        );
+
+    });
+
+}
+
+
+window.addEventListener(
+    "scroll",
+    updateActiveNavigation,
+    { passive: true }
+);
+
+updateActiveNavigation();
+
+
+/* =========================================================
+   06. HERO PARALLAX
+========================================================= */
+
+const heroVisual =
+    document.querySelector(".hero-visual");
+
+
+const reduceMotion =
+    window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+    ).matches;
+
+
+if (
+    heroVisual &&
+    !reduceMotion &&
+    window.innerWidth > 850
+) {
+
+    let ticking = false;
+
+    window.addEventListener(
+        "scroll",
+        () => {
+
+            if (ticking) return;
+
+            window.requestAnimationFrame(() => {
+
+                const scrollY = window.scrollY;
+
+                if (scrollY < window.innerHeight) {
+
+                    const movement =
+                        scrollY * 0.08;
+
+                    heroVisual.style.transform =
+                        `translateY(${movement}px)`;
+
+                }
+
+                ticking = false;
+
+            });
+
+            ticking = true;
+
+        },
+        { passive: true }
     );
 
-    document.querySelectorAll('.reveal').forEach(function (el) {
-      revealObserver.observe(el);
+}
+
+
+/* =========================================================
+   07. PROJECT CARD TILT
+========================================================= */
+
+const interactiveCards =
+    document.querySelectorAll(
+        ".skill-card, .project"
+    );
+
+
+if (!reduceMotion && window.innerWidth > 900) {
+
+    interactiveCards.forEach((card) => {
+
+        card.addEventListener(
+            "mousemove",
+            (event) => {
+
+                const rect =
+                    card.getBoundingClientRect();
+
+                const x =
+                    event.clientX - rect.left;
+
+                const y =
+                    event.clientY - rect.top;
+
+                const centerX =
+                    rect.width / 2;
+
+                const centerY =
+                    rect.height / 2;
+
+                const rotateX =
+                    ((y - centerY) / centerY) * -1.5;
+
+                const rotateY =
+                    ((x - centerX) / centerX) * 1.5;
+
+                card.style.transform =
+                    `translateY(-4px)
+                     perspective(1000px)
+                     rotateX(${rotateX}deg)
+                     rotateY(${rotateY}deg)`;
+
+            }
+        );
+
+
+        card.addEventListener(
+            "mouseleave",
+            () => {
+
+                card.style.transform = "";
+
+            }
+        );
+
     });
-  }
 
-  initReveal();
+}
 
-  /* =============================================
-     ACTIVE NAV LINK — highlight on scroll
-     ============================================= */
-  var sections = [];
 
-  document.querySelectorAll('section[id]').forEach(function (s) {
-    sections.push(s);
-  });
+/* =========================================================
+   08. SMOOTH INTERNAL LINKS
+========================================================= */
 
-  function updateActiveLink() {
-    var scrollY = window.scrollY;
-    var navHeight = nav ? nav.offsetHeight : 0;
+const internalLinks =
+    document.querySelectorAll(
+        'a[href^="#"]'
+    );
 
-    var current = '';
-    sections.forEach(function (section) {
-      var top = section.offsetTop - navHeight - 80;
-      if (scrollY >= top) {
-        current = section.getAttribute('id');
-      }
-    });
 
-    allLinks.forEach(function (link) {
-      link.classList.remove('nav__link--active');
-      if (link.getAttribute('href') === '#' + current) {
-        link.classList.add('nav__link--active');
-      }
-    });
-  }
+internalLinks.forEach((link) => {
 
-  window.addEventListener('scroll', updateActiveLink, { passive: true });
-  updateActiveLink();
+    link.addEventListener(
+        "click",
+        (event) => {
 
-})();
+            const targetId =
+                link.getAttribute("href");
+
+            if (
+                !targetId ||
+                targetId === "#"
+            ) {
+                return;
+            }
+
+            const target =
+                document.querySelector(targetId);
+
+            if (!target) {
+                return;
+            }
+
+            event.preventDefault();
+
+            target.scrollIntoView({
+                behavior: reduceMotion
+                    ? "auto"
+                    : "smooth",
+                block: "start"
+            });
+
+        }
+    );
+
+});
+
+
+/* =========================================================
+   09. CONTACT LINK FEEDBACK
+========================================================= */
+
+const contactLinks =
+    document.querySelectorAll(
+        ".contact-link"
+    );
+
+
+contactLinks.forEach((link) => {
+
+    link.addEventListener(
+        "mouseenter",
+        () => {
+            link.classList.add("hovered");
+        }
+    );
+
+
+    link.addEventListener(
+        "mouseleave",
+        () => {
+            link.classList.remove("hovered");
+        }
+    );
+
+});
+
+
+/* =========================================================
+   10. CURRENT YEAR
+========================================================= */
+
+const footerYear =
+    document.querySelector(
+        ".footer p"
+    );
+
+
+if (footerYear) {
+
+    const currentYear =
+        new Date().getFullYear();
+
+    footerYear.textContent =
+        `© ${currentYear} Aditya Islary`;
+
+}
+
+
+/* =========================================================
+   11. INITIAL PAGE STATE
+========================================================= */
+
+document.documentElement.classList.add(
+    "js-enabled"
+);
