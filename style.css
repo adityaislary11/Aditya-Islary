@@ -915,32 +915,128 @@ letter-spacing: 0.1em;
 
 
 /* =========================================
-   WEB NODES
+   NETWORK NODES
 ========================================= */
 
 .network-node {
+    position: absolute;
     z-index: 15;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7px;
+
+    color: var(--text);
+
+    font-family: var(--mono);
+    font-size: 0.58rem;
+    letter-spacing: 0.04em;
+
+    text-transform: uppercase;
 }
+
+
+/* Circular network footer */
 
 .node-icon {
     position: relative;
+
+    display: grid;
+    width: 48px;
+    height: 48px;
+
+    place-items: center;
+
+    border: 1px solid rgba(56, 189, 248, 0.42);
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(56, 189, 248, 0.12),
+            rgba(5, 10, 18, 0.92) 68%
+        );
+
+    color: var(--blue);
+
     box-shadow:
-        0 0 0 5px rgba(56, 189, 248, 0.025),
-        0 0 25px rgba(56, 189, 248, 0.12);
+        0 0 0 1px rgba(56, 189, 248, 0.05),
+        0 0 18px rgba(56, 189, 248, 0.12);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
 }
 
 
-/* Small glow behind every node */
+/* Outer circular ring */
 
 .node-icon::before {
     content: "";
+
     position: absolute;
-    inset: -7px;
+    inset: -6px;
+
     border: 1px solid rgba(56, 189, 248, 0.08);
     border-radius: 50%;
 }
 
 
+/* Small connection point */
+
+.node-icon::after {
+    content: "";
+
+    position: absolute;
+
+    width: 5px;
+    height: 5px;
+
+    border-radius: 50%;
+
+    background: var(--blue);
+
+    box-shadow:
+        0 0 8px rgba(56, 189, 248, 0.8);
+
+    bottom: -3px;
+    right: 3px;
+}
+
+
+/* Subtle hover */
+
+.network-node:hover .node-icon {
+    transform: translateY(-3px);
+
+    border-color: rgba(56, 189, 248, 0.75);
+
+    box-shadow:
+        0 0 0 1px rgba(56, 189, 248, 0.08),
+        0 0 28px rgba(56, 189, 248, 0.2);
+}
+
+
+/* Node positions */
+
+.citizen-node {
+    top: 18%;
+    left: 13%;
+}
+
+
+.volunteer-node {
+    top: 18%;
+    right: 10%;
+}
+
+
+.authority-node {
+    right: 12%;
+    bottom: 18%;
+}
 /* =========================================
    CENTRAL ESMITRA NODE
 ========================================= */
