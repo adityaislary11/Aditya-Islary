@@ -1,1084 +1,363 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta
-        name="description"
-        content="Aditya Islary — Student, Freelancer and Builder. Explore my projects, skills, achievements and journey."
-    >
-    <meta name="author" content="Aditya Islary">
-
-    <meta property="og:title" content="Aditya Islary | Student • Freelancer">
-    <meta
-        property="og:description"
-        content="Personal portfolio of Aditya Islary."
-    >
-    <meta property="og:type" content="website">
-
-    <title>Aditya Islary | Student • Freelancer</title>
-
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="description" content="Aditya Islary — Student, freelancer, and builder. Creating digital projects that actually work." />
+  <meta property="og:title" content="Aditya Islary | Student & Freelancer" />
+  <meta property="og:description" content="Student, freelancer, and builder of digital things." />
+  <meta property="og:type" content="website" />
+  <title>Aditya Islary | Student &amp; Freelancer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
 
-<div class="site-background">
-    <div class="background-grid"></div>
-    <div class="background-glow glow-one"></div>
-    <div class="background-glow glow-two"></div>
-    <div class="background-glow glow-three"></div>
-</div>
+  <!-- NAVIGATION -->
+  <nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="#home" class="nav__logo" aria-label="Aditya Islary home">AI.</a>
+      <ul class="nav__links" id="navLinks" role="list">
+        <li><a href="#home" class="nav__link">Home</a></li>
+        <li><a href="#about" class="nav__link">About</a></li>
+        <li><a href="#skills" class="nav__link">Skills</a></li>
+        <li><a href="#projects" class="nav__link">Projects</a></li>
+        <li><a href="#achievements" class="nav__link">Achievements</a></li>
+        <li><a href="#contact" class="nav__link">Contact</a></li>
+      </ul>
+      <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Open navigation menu">
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+      </button>
+    </div>
+  </nav>
 
+  <main>
 
-<header class="site-header">
+    <!-- HERO -->
+    <section class="hero" id="home" aria-label="Introduction">
+      <div class="hero__content">
+        <p class="hero__label">Student · Freelancer · Builder</p>
+        <h1 class="hero__heading">
+          Hi, I'm<br />
+          <span class="hero__name">Aditya Islary</span>
+        </h1>
+        <p class="hero__desc">
+          I build digital projects, experiment with technology,<br class="hero__br" />
+          and turn ideas into things that actually work.
+        </p>
+        <div class="hero__actions">
+          <a href="#projects" class="btn btn--primary">View My Work</a>
+          <a href="#contact" class="btn btn--ghost">Get In Touch</a>
+        </div>
+        <div class="hero__social">
+          <a href="https://github.com/Adityaislary11" class="hero__social-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+            GitHub
+          </a>
+          <a href="mailto:adityaislary11@gmail.com" class="hero__social-link" aria-label="Send email">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
+            Email
+          </a>
+        </div>
+      </div>
+      <div class="hero__visual" aria-hidden="true">
+        <div class="hero__orb hero__orb--1"></div>
+        <div class="hero__orb hero__orb--2"></div>
+        <div class="hero__orb hero__orb--3"></div>
+        <div class="hero__glass">
+          <div class="hero__glass-row">
+            <span class="hero__glass-dot hero__glass-dot--r"></span>
+            <span class="hero__glass-dot hero__glass-dot--y"></span>
+            <span class="hero__glass-dot hero__glass-dot--g"></span>
+            <span class="hero__glass-file">portfolio.js</span>
+          </div>
+          <pre class="hero__code"><span class="c-kw">const</span> <span class="c-var">aditya</span> = {
+  <span class="c-key">role</span>: <span class="c-str">"builder"</span>,
+  <span class="c-key">focus</span>: [<span class="c-str">"web"</span>, <span class="c-str">"chess"</span>],
+  <span class="c-key">status</span>: <span class="c-str">"shipping"</span>,
+  <span class="c-key">available</span>: <span class="c-bool">true</span>
+};</pre>
+          <div class="hero__glass-footer">
+            <span class="hero__status-dot"></span>
+            <span class="hero__status-text">Open to work</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <nav class="navbar container">
+    <!-- ABOUT -->
+    <section class="about section" id="about" aria-labelledby="about-heading">
+      <div class="container">
+        <div class="about__grid">
+          <div class="about__text reveal">
+            <h2 id="about-heading" class="section__heading">Someone who<br />builds &amp; learns.</h2>
+            <p class="about__para">
+              I'm Aditya Islary, a student and freelancer interested in technology,
+              software development, and building useful digital experiences.
+            </p>
+            <p class="about__para">
+              I enjoy taking an idea from a rough concept and turning it into a working project.
+              My current work includes ESMITRA, a smart incident-response platform,
+              and a browser-based chess engine.
+            </p>
+            <p class="about__para">
+              I'm continuously learning new technologies while improving my ability
+              to solve problems and build better software.
+            </p>
+          </div>
+          <div class="about__stats reveal reveal--delay">
+            <div class="stat-card">
+              <span class="stat-card__number">02</span>
+              <span class="stat-card__label">Major Projects</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-card__number">02</span>
+              <span class="stat-card__label">Regional Achievements</span>
+            </div>
+            <div class="stat-card stat-card--wide">
+              <span class="stat-card__number">∞</span>
+              <span class="stat-card__label">Things Left To Build</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <a href="#home" class="brand" aria-label="Aditya Islary home">
-            <span class="brand-mark">AI</span>
-            <span class="brand-name">ADITYA<span>.</span></span>
-        </a>
+    <!-- SKILLS -->
+    <section class="skills section" id="skills" aria-labelledby="skills-heading">
+      <div class="container">
+        <h2 id="skills-heading" class="section__heading section__heading--center reveal">What I work with</h2>
+        <div class="skills__grid">
 
-        <button
-            class="menu-toggle"
-            id="menuToggle"
-            type="button"
-            aria-label="Open navigation menu"
-            aria-expanded="false"
-            aria-controls="navLinks"
-        >
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
+          <article class="skill-card reveal">
+            <div class="skill-card__icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+            <h3 class="skill-card__name">HTML</h3>
+            <p class="skill-card__desc">Semantic structure, accessibility, and solid document foundations.</p>
+          </article>
 
-        <div class="nav-links" id="navLinks">
+          <article class="skill-card reveal">
+            <div class="skill-card__icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+            </div>
+            <h3 class="skill-card__name">CSS</h3>
+            <p class="skill-card__desc">Layouts, responsive design, animations, and visual polish.</p>
+          </article>
 
-            <a href="#home" class="nav-link active">Home</a>
-            <a href="#about" class="nav-link">About</a>
-            <a href="#projects" class="nav-link">Projects</a>
-            <a href="#skills" class="nav-link">Skills</a>
-            <a href="#achievements" class="nav-link">Achievements</a>
-            <a href="#journey" class="nav-link">Journey</a>
-            <a href="#contact" class="nav-link">Contact</a>
+          <article class="skill-card reveal">
+            <div class="skill-card__icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3 class="skill-card__name">JavaScript</h3>
+            <p class="skill-card__desc">Interactive UI, logic, DOM manipulation, and browser-side projects.</p>
+          </article>
 
-            <a
-                href="https://github.com/Adityaislary11"
-                class="nav-github"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                GitHub <span>↗</span>
+          <article class="skill-card reveal">
+            <div class="skill-card__icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            </div>
+            <h3 class="skill-card__name">Firebase</h3>
+            <p class="skill-card__desc">Realtime databases, authentication, and cloud-hosted backends.</p>
+          </article>
+
+          <article class="skill-card reveal">
+            <div class="skill-card__icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            </div>
+            <h3 class="skill-card__name">Git &amp; GitHub</h3>
+            <p class="skill-card__desc">Version control, repositories, and collaborative development workflows.</p>
+          </article>
+
+          <article class="skill-card reveal">
+            <div class="skill-card__icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"/></svg>
+            </div>
+            <h3 class="skill-card__name">Problem Solving</h3>
+            <p class="skill-card__desc">Breaking down complex challenges and finding workable solutions.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="projects section" id="projects" aria-labelledby="projects-heading">
+      <div class="container">
+        <h2 id="projects-heading" class="section__heading reveal">Things I've built</h2>
+
+        <!-- ESMITRA — featured -->
+        <article class="project-card project-card--featured reveal" aria-labelledby="proj1-name">
+          <div class="project-card__meta">
+            <span class="project-card__num">01</span>
+            <span class="project-card__type">Platform</span>
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__text">
+              <h3 class="project-card__name" id="proj1-name">ESMITRA</h3>
+              <p class="project-card__sub">Smart Incident Response</p>
+              <p class="project-card__desc">
+                A digital incident-reporting and management platform designed to connect
+                citizens, volunteers, and authorities through one unified system.
+              </p>
+              <ul class="project-card__tags" role="list">
+                <li class="tag">HTML</li>
+                <li class="tag">CSS</li>
+                <li class="tag">JavaScript</li>
+                <li class="tag">Firebase</li>
+              </ul>
+              <a href="https://sentinel-link-orpin.vercel.app" class="btn btn--primary btn--sm" target="_blank" rel="noopener noreferrer">
+                Visit Project ↗
+              </a>
+            </div>
+            <div class="project-card__visual" aria-hidden="true">
+              <div class="proj-visual">
+                <div class="proj-visual__ring proj-visual__ring--1"></div>
+                <div class="proj-visual__ring proj-visual__ring--2"></div>
+                <div class="proj-visual__ring proj-visual__ring--3"></div>
+                <div class="proj-visual__center">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Chess Engine -->
+        <article class="project-card reveal reveal--delay" aria-labelledby="proj2-name">
+          <div class="project-card__meta">
+            <span class="project-card__num">02</span>
+            <span class="project-card__type">Engine</span>
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__text">
+              <h3 class="project-card__name" id="proj2-name">Chess Engine</h3>
+              <p class="project-card__sub">Browser-Based Chess &amp; Engine</p>
+              <p class="project-card__desc">
+                A browser-based chess project combining a playable chessboard with
+                custom move generation and engine search logic.
+              </p>
+              <ul class="project-card__tags" role="list">
+                <li class="tag">JavaScript</li>
+                <li class="tag">Chess.js</li>
+                <li class="tag">Search</li>
+                <li class="tag">FEN</li>
+              </ul>
+              <a href="https://github.com/Adityaislary11" class="btn btn--ghost btn--sm" target="_blank" rel="noopener noreferrer">
+                View GitHub ↗
+              </a>
+            </div>
+            <div class="project-card__visual" aria-hidden="true">
+              <div class="chess-visual">
+                <div class="chess-board">
+                  <div class="chess-board__grid">
+                    <span class="cb cb--w"></span><span class="cb cb--b"></span><span class="cb cb--w"></span><span class="cb cb--b"></span>
+                    <span class="cb cb--b"></span><span class="cb cb--w"></span><span class="cb cb--b"></span><span class="cb cb--w"></span>
+                    <span class="cb cb--w"></span><span class="cb cb--b"></span><span class="cb cb--w"></span><span class="cb cb--b"></span>
+                    <span class="cb cb--b"></span><span class="cb cb--w"></span><span class="cb cb--b"></span><span class="cb cb--w"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ACHIEVEMENTS -->
+    <section class="achievements section" id="achievements" aria-labelledby="achievements-heading">
+      <div class="container">
+        <h2 id="achievements-heading" class="section__heading section__heading--center reveal">Recognised work</h2>
+        <div class="achievements__list">
+
+          <article class="ach-card reveal" aria-labelledby="ach1-title">
+            <div class="ach-card__medal" aria-label="Silver medal">🥈</div>
+            <div class="ach-card__body">
+              <span class="ach-card__place">2nd Place</span>
+              <h3 class="ach-card__title" id="ach1-title">Regional Jigyasa 2025–26</h3>
+              <time class="ach-card__date" datetime="2025-11">November 25–26, 2025</time>
+            </div>
+            <div class="ach-card__line" aria-hidden="true"></div>
+          </article>
+
+          <article class="ach-card reveal reveal--delay" aria-labelledby="ach2-title">
+            <div class="ach-card__medal" aria-label="Bronze medal">🥉</div>
+            <div class="ach-card__body">
+              <span class="ach-card__place">3rd Place</span>
+              <h3 class="ach-card__title" id="ach2-title">Regional Anveshana 2025–26</h3>
+              <time class="ach-card__date" datetime="2026-02">February 2026</time>
+            </div>
+            <div class="ach-card__line" aria-hidden="true"></div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact section" id="contact" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="contact__inner">
+          <div class="contact__text reveal">
+            <h2 id="contact-heading" class="section__heading">Let's build something.</h2>
+            <p class="contact__sub">Have an idea, project, or opportunity? Feel free to reach out.</p>
+          </div>
+          <div class="contact__cards">
+
+            <a href="mailto:adityaislary11@gmail.com" class="contact-card reveal" aria-label="Send an email to Aditya">
+              <div class="contact-card__icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
+              </div>
+              <div class="contact-card__body">
+                <span class="contact-card__label">Email</span>
+                <span class="contact-card__value">adityaislary11@gmail.com</span>
+              </div>
+              <span class="contact-card__arrow" aria-hidden="true">↗</span>
             </a>
 
-        </div>
-
-    </nav>
-
-</header>
-
-
-<main>
-
-<!-- HERO -->
-
-<section class="hero section" id="home">
-
-    <div class="hero-container container">
-
-        <div class="hero-content reveal">
-
-            <div class="hero-status">
-                <span class="status-indicator"></span>
-                <span class="status-line">
-                    AVAILABLE FOR FREELANCE WORK
-                </span>
-            </div>
-
-            <p class="hero-kicker">
-                STUDENT • FREELANCER • BUILDER
-            </p>
-
-            <h1 class="hero-title">
-                Aditya
-                <span class="gradient-text">Islary.</span>
-            </h1>
-
-            <p class="hero-description">
-                I enjoy turning ideas into useful digital experiences,
-                experimenting with technology, and building projects
-                that solve real problems.
-            </p>
-
-            <div class="hero-actions">
-
-                <a href="#projects" class="button button-primary">
-                    View Projects
-                    <span>→</span>
-                </a>
-
-                <a href="#contact" class="button button-ghost">
-                    Contact Me
-                </a>
-
-            </div>
-
-            <div class="hero-details">
-
-                <div class="hero-detail">
-                    <span class="detail-label">ROLE</span>
-                    <span class="detail-value">
-                        Student / Freelancer
-                    </span>
-                </div>
-
-                <div class="hero-detail">
-                    <span class="detail-label">FOCUS</span>
-                    <span class="detail-value">
-                        AI / CS / Web
-                    </span>
-                </div>
-
-                <div class="hero-detail">
-                    <span class="detail-label">BASE</span>
-                    <span class="detail-value">
-                        India
-                    </span>
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <div class="hero-system reveal reveal-delay">
-
-            <div class="system-card">
-
-                <div class="system-topbar">
-
-                    <div class="system-window-controls">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-
-                    <span class="system-title">
-                        aditya.dev
-                    </span>
-
-                    <span class="system-status">
-                        ONLINE
-                    </span>
-
-                </div>
-
-                <div class="system-content">
-
-                    <div class="system-orbit orbit-one"></div>
-                    <div class="system-orbit orbit-two"></div>
-                    <div class="system-orbit orbit-three"></div>
-
-                    <div class="system-core">
-                        <div class="core-inner">AI</div>
-                        <div class="core-ring"></div>
-                    </div>
-
-                    <div class="system-node node-one">
-                        WEB
-                    </div>
-
-                    <div class="system-node node-two">
-                        AI
-                    </div>
-
-                    <div class="system-node node-three">
-                        CS
-                    </div>
-
-                    <div class="system-node node-four">
-                        BUILD
-                    </div>
-
-                    <div class="system-connection connection-one"></div>
-                    <div class="system-connection connection-two"></div>
-                    <div class="system-connection connection-three"></div>
-                    <div class="system-connection connection-four"></div>
-
-                </div>
-
-                <div class="system-footer">
-                    <span>SYSTEM STATUS</span>
-                    <span>BUILDING...</span>
-                </div>
-
-            </div>
-
-            <div class="floating-data data-one">
-                &lt;/&gt; WEB
-            </div>
-
-            <div class="floating-data data-two">
-                AI + CS
-            </div>
-
-            <div class="floating-data data-three">
-                GIT
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- TECH MARQUEE -->
-
-<div class="tech-marquee">
-
-    <div class="marquee-track">
-
-        <span>WEB DEVELOPMENT</span>
-        <span>•</span>
-        <span>ARTIFICIAL INTELLIGENCE</span>
-        <span>•</span>
-        <span>COMPUTER SCIENCE</span>
-        <span>•</span>
-        <span>PROBLEM SOLVING</span>
-        <span>•</span>
-        <span>SOFTWARE</span>
-        <span>•</span>
-
-        <span>WEB DEVELOPMENT</span>
-        <span>•</span>
-        <span>ARTIFICIAL INTELLIGENCE</span>
-        <span>•</span>
-        <span>COMPUTER SCIENCE</span>
-        <span>•</span>
-        <span>PROBLEM SOLVING</span>
-        <span>•</span>
-        <span>SOFTWARE</span>
-        <span>•</span>
-
-    </div>
-
-</div>
-
-
-<!-- ABOUT -->
-
-<section class="section" id="about">
-
-    <div class="container">
-
-        <div class="section-header reveal">
-
-            <span class="section-index">01</span>
-
-            <div>
-                <p class="section-kicker">GET TO KNOW ME</p>
-                <h2>
-                    About
-                    <span class="gradient-text">Me.</span>
-                </h2>
-            </div>
-
-        </div>
-
-
-        <div class="about-layout">
-
-            <div class="about-main reveal">
-
-                <p class="about-lead">
-                    I'm Aditya Islary, a student and freelancer
-                    interested in technology, software development,
-                    artificial intelligence and computer science.
-                </p>
-
-                <p>
-                    I like learning by building. Rather than only
-                    studying concepts, I try to turn what I learn into
-                    actual projects, experiments and useful software.
-                </p>
-
-                <p>
-                    My current projects include a smart
-                    incident-response platform and a chess engine,
-                    while I continue exploring web development,
-                    AI and computer science.
-                </p>
-
-                <a href="#contact" class="text-link">
-                    Let's connect <span>→</span>
-                </a>
-
-            </div>
-
-
-            <div class="about-panel reveal reveal-delay">
-
-                <div class="panel-top">
-                    <span class="panel-dot"></span>
-                    <span class="panel-name">PROFILE</span>
-                </div>
-
-                <div class="panel-divider"></div>
-
-                <div class="panel-row">
-                    <span>NAME</span>
-                    <strong>Aditya Islary</strong>
-                </div>
-
-                <div class="panel-row">
-                    <span>ROLE</span>
-                    <strong>Student / Freelancer</strong>
-                </div>
-
-                <div class="panel-row">
-                    <span>INTEREST</span>
-                    <strong>Technology</strong>
-                </div>
-
-                <div class="panel-row">
-                    <span>APPROACH</span>
-                    <strong>Learn → Build → Improve</strong>
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- PROJECTS -->
-
-<section class="section projects-section" id="projects">
-
-    <div class="container">
-
-        <div class="section-header reveal">
-
-            <span class="section-index">02</span>
-
-            <div>
-                <p class="section-kicker">THINGS I'VE BUILT</p>
-                <h2>
-                    Featured
-                    <span class="gradient-text">Projects.</span>
-                </h2>
-            </div>
-
-        </div>
-
-
-        <div class="projects-grid">
-
-
-            <!-- ESMITRA -->
-
-            <article class="project-card project-featured reveal">
-
-                <div class="project-card-header">
-
-                    <span class="project-number">
-                        01
-                    </span>
-
-                    <span class="project-status">
-                        IN DEVELOPMENT
-                    </span>
-
-                </div>
-
-
-                <div class="project-visual esmitra-visual">
-
-                    <div class="esmitra-grid"></div>
-
-                    <div class="esmitra-radar">
-
-                        <div class="radar-ring"></div>
-                        <div class="radar-ring"></div>
-                        <div class="radar-ring"></div>
-
-                        <div class="radar-cross"></div>
-                        <div class="radar-center"></div>
-                        <div class="radar-point"></div>
-
-                    </div>
-
-                    <span class="esmitra-label label-report">
-                        REPORT
-                    </span>
-
-                    <span class="esmitra-label label-respond">
-                        RESPOND
-                    </span>
-
-                    <span class="esmitra-label label-resolve">
-                        RESOLVE
-                    </span>
-
-                </div>
-
-
-                <div class="project-card-body">
-
-                    <span class="project-category">
-                        INCIDENT RESPONSE PLATFORM
-                    </span>
-
-                    <h3>ESMITRA</h3>
-
-                    <p class="project-description">
-                        A smart incident reporting and management
-                        platform designed to connect citizens,
-                        volunteers and authorities through one
-                        digital system.
-                    </p>
-
-                    <div class="project-tech">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>JavaScript</span>
-                        <span>Firebase</span>
-                    </div>
-
-                    <div class="project-actions">
-
-                        <a
-                            href="https://sentinel-link-orpin.vercel.app"
-                            class="project-button"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            View Project
-                            <span>↗</span>
-                        </a>
-
-                        <a
-                            href="https://github.com/Adityaislary11"
-                            class="project-button"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            GitHub
-                            <span>↗</span>
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-            <!-- CHESS ENGINE -->
-
-            <article class="project-card reveal">
-
-                <div class="project-card-header">
-
-                    <span class="project-number">
-                        02
-                    </span>
-
-                    <span class="project-status">
-                        BUILDING
-                    </span>
-
-                </div>
-
-
-                <div class="project-visual chess-visual">
-
-                    <div class="chess-board">
-
-                        <span class="chess-piece">♜</span>
-                        <span class="chess-piece">♞</span>
-                        <span class="chess-piece">♝</span>
-                        <span class="chess-piece">♛</span>
-                        <span class="chess-piece">♚</span>
-                        <span class="chess-piece">♝</span>
-                        <span class="chess-piece">♞</span>
-                        <span class="chess-piece">♜</span>
-
-                        <span class="chess-piece">♟</span>
-                        <span class="chess-piece">♟</span>
-                        <span class="chess-piece">♟</span>
-                        <span class="chess-piece">♟</span>
-                        <span class="chess-piece">♟</span>
-                        <span class="chess-piece">♟</span>
-                        <span class="chess-piece">♟</span>
-                        <span class="chess-piece">♟</span>
-
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span class="chess-piece">♘</span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-
-                        <span class="chess-piece">♙</span>
-                        <span class="chess-piece">♙</span>
-                        <span class="chess-piece">♙</span>
-                        <span class="chess-piece">♙</span>
-                        <span></span>
-                        <span class="chess-piece">♙</span>
-                        <span class="chess-piece">♙</span>
-                        <span class="chess-piece">♙</span>
-
-                        <span class="chess-piece">♖</span>
-                        <span class="chess-piece">♘</span>
-                        <span class="chess-piece">♗</span>
-                        <span class="chess-piece">♕</span>
-                        <span class="chess-piece">♔</span>
-                        <span class="chess-piece">♗</span>
-                        <span class="chess-piece">♘</span>
-                        <span class="chess-piece">♖</span>
-
-                    </div>
-
-                    <div class="chess-overlay">
-                        <span>ENGINE</span>
-                        <strong>CALCULATING</strong>
-                    </div>
-
-                </div>
-
-
-                <div class="project-card-body">
-
-                    <span class="project-category">
-                        SOFTWARE / ALGORITHMS
-                    </span>
-
-                    <h3>Chess Engine</h3>
-
-                    <p class="project-description">
-                        A custom chess engine project exploring board
-                        representation, move generation, game logic
-                        and algorithmic thinking.
-                    </p>
-
-                    <div class="project-tech">
-                        <span>JavaScript</span>
-                        <span>Algorithms</span>
-                        <span>Game Logic</span>
-                    </div>
-
-                </div>
-
-            </article>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- SKILLS -->
-
-<section class="section skills-section" id="skills">
-
-    <div class="container">
-
-        <div class="section-header reveal">
-
-            <span class="section-index">03</span>
-
-            <div>
-                <p class="section-kicker">WHAT I WORK WITH</p>
-                <h2>
-                    Skills I'm
-                    <span class="gradient-text">developing.</span>
-                </h2>
-            </div>
-
-        </div>
-
-
-        <div class="skills-grid">
-
-            <div class="skill-card reveal">
-
-                <div class="skill-top">
-                    <span>01</span>
-                    <span>WEB</span>
-                </div>
-
-                <h3>Web Development</h3>
-
-                <p>
-                    Building responsive and interactive web experiences.
-                </p>
-
-                <div class="skill-tags">
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>JavaScript</span>
-                </div>
-
-            </div>
-
-
-            <div class="skill-card reveal">
-
-                <div class="skill-top">
-                    <span>02</span>
-                    <span>AI</span>
-                </div>
-
-                <h3>Artificial Intelligence</h3>
-
-                <p>
-                    Exploring AI concepts, applications and
-                    intelligent systems.
-                </p>
-
-                <div class="skill-tags">
-                    <span>AI</span>
-                    <span>ML</span>
-                    <span>Problem Solving</span>
-                </div>
-
-            </div>
-
-
-            <div class="skill-card reveal">
-
-                <div class="skill-top">
-                    <span>03</span>
-                    <span>CS</span>
-                </div>
-
-                <h3>Computer Science</h3>
-
-                <p>
-                    Learning programming, algorithms, data structures
-                    and computational concepts.
-                </p>
-
-                <div class="skill-tags">
-                    <span>Programming</span>
-                    <span>Algorithms</span>
-                    <span>CS</span>
-                </div>
-
-            </div>
-
-
-            <div class="skill-card reveal">
-
-                <div class="skill-top">
-                    <span>04</span>
-                    <span>TOOLS</span>
-                </div>
-
-                <h3>Development Tools</h3>
-
-                <p>
-                    Managing projects and working with modern
-                    development workflows.
-                </p>
-
-                <div class="skill-tags">
-                    <span>Git</span>
-                    <span>GitHub</span>
-                    <span>Vercel</span>
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ACHIEVEMENTS -->
-
-<section class="section" id="achievements">
-
-    <div class="container">
-
-        <div class="section-header reveal">
-
-            <span class="section-index">04</span>
-
-            <div>
-                <p class="section-kicker">RECOGNITION</p>
-                <h2>
-                    Achievements &
-                    <span class="gradient-text">milestones.</span>
-                </h2>
-            </div>
-
-        </div>
-
-
-        <div class="achievement-card reveal">
-
-            <div class="achievement-number">
-                01
-            </div>
-
-            <div class="achievement-main">
-
-                <div class="achievement-meta">
-                    2025–26 • BHUBANESWAR
-                </div>
-
-                <h3>
-                    Anveshana 2025–26
-                </h3>
-
-                <p>
-                    Third Prize — Regional Science & Engineering Fair
-                </p>
-
-                <div class="achievement-details">
-
-                    <span>
-                        Participant: Aditya Islary
-                    </span>
-
-                    <span>
-                        18–19 February 2026
-                    </span>
-
-                    <span>
-                        Bhubaneswar
-                    </span>
-
-                </div>
-
-            </div>
-
-            <div class="achievement-badge">
-                3RD
-            </div>
-
-        </div>
-
-
-        <div class="achievement-card reveal">
-
-            <div class="achievement-number">
-                02
-            </div>
-
-            <div class="achievement-main">
-
-                <div class="achievement-meta">
-                    2025–26 • VIRTUAL
-                </div>
-
-                <h3>
-                    Jignyasa 2025–26
-                </h3>
-
-                <p>
-                    Second Prize — Regional Jignyasa 2025–26,
-                    a problem-solving innovative competition
-                    for students.
-                </p>
-
-                <div class="achievement-details">
-
-                    <span>
-                        Participant: Aditya Islary
-                    </span>
-
-                    <span>
-                        25–26 November 2025
-                    </span>
-
-                    <span>
-                        Conducted virtually
-                    </span>
-
-                </div>
-
-            </div>
-
-            <div class="achievement-badge">
-                2ND
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- JOURNEY -->
-
-<section class="section" id="journey">
-
-    <div class="container">
-
-        <div class="section-header reveal">
-
-            <span class="section-index">05</span>
-
-            <div>
-                <p class="section-kicker">THE PROCESS</p>
-                <h2>
-                    My
-                    <span class="gradient-text">Journey.</span>
-                </h2>
-            </div>
-
-        </div>
-
-
-        <div class="journey-track">
-
-            <div class="journey-line"></div>
-
-
-            <div class="journey-item reveal">
-
-                <div class="journey-marker">
-                    01
-                </div>
-
-                <div class="journey-content">
-
-                    <span>NOW</span>
-
-                    <h3>Building Real Projects</h3>
-
-                    <p>
-                        Turning ideas into practical projects such
-                        as ESMITRA and a custom chess engine.
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <div class="journey-item reveal">
-
-                <div class="journey-marker">
-                    02
-                </div>
-
-                <div class="journey-content">
-
-                    <span>LEARNING</span>
-
-                    <h3>Exploring AI & Computer Science</h3>
-
-                    <p>
-                        Developing a stronger foundation in AI,
-                        programming, algorithms and computer science.
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <div class="journey-item reveal">
-
-                <div class="journey-marker">
-                    03
-                </div>
-
-                <div class="journey-content">
-
-                    <span>NEXT</span>
-
-                    <h3>Build Bigger</h3>
-
-                    <p>
-                        Keep learning, experiment with new
-                        technologies and create increasingly useful
-                        software.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- CONTACT -->
-
-<section class="section contact-section" id="contact">
-
-    <div class="contact-background"></div>
-
-    <div class="container contact-layout">
-
-        <div class="contact-heading reveal">
-
-            <p class="section-kicker">
-                GET IN TOUCH
-            </p>
-
-            <h2>
-                Have an idea?
-                <span class="gradient-text">
-                    Let's build it.
-                </span>
-            </h2>
-
-            <p>
-                Whether you want to discuss a project,
-                collaboration or freelance work,
-                feel free to reach out.
-            </p>
-
-        </div>
-
-
-        <div class="contact-links reveal">
-
-            <a
-                href="mailto:islaryaditya@gmail.com"
-                class="contact-link"
-            >
-                <span class="contact-link-icon">@</span>
-
-                <span>
-                    <small>EMAIL</small>
-                    islaryaditya@gmail.com
-                </span>
-
-                <span>↗</span>
+            <a href="tel:+919401525404" class="contact-card reveal reveal--delay" aria-label="Call Aditya">
+              <div class="contact-card__icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.42 2 2 0 0 1 3.59 1.24h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 15.92z"/></svg>
+              </div>
+              <div class="contact-card__body">
+                <span class="contact-card__label">Phone</span>
+                <span class="contact-card__value">+91 94015 25404</span>
+              </div>
+              <span class="contact-card__arrow" aria-hidden="true">↗</span>
             </a>
 
-
-            <a
-                href="tel:+919401525404"
-                class="contact-link"
-            >
-                <span class="contact-link-icon">☎</span>
-
-                <span>
-                    <small>PHONE</small>
-                    +91 94015 25404
-                </span>
-
-                <span>↗</span>
+            <a href="https://github.com/Adityaislary11" class="contact-card reveal reveal--delay-2" target="_blank" rel="noopener noreferrer" aria-label="View GitHub profile">
+              <div class="contact-card__icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+              </div>
+              <div class="contact-card__body">
+                <span class="contact-card__label">GitHub</span>
+                <span class="contact-card__value">@Adityaislary11</span>
+              </div>
+              <span class="contact-card__arrow" aria-hidden="true">↗</span>
             </a>
 
-
-            <a
-                href="https://github.com/Adityaislary11"
-                class="contact-link"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                <span class="contact-link-icon">⌘</span>
-
-                <span>
-                    <small>GITHUB</small>
-                    Adityaislary11
-                </span>
-
-                <span>↗</span>
-            </a>
-
+          </div>
         </div>
+      </div>
+    </section>
 
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer__inner">
+      <span class="footer__logo">AI.</span>
+      <p class="footer__copy">© 2026 Aditya Islary. Built with HTML, CSS &amp; JavaScript.</p>
+      <a href="#home" class="footer__top" aria-label="Back to top">Back to top ↑</a>
     </div>
+  </footer>
 
-</section>
-
-</main>
-
-
-<!-- FOOTER -->
-
-<footer class="footer">
-
-    <div class="container footer-inner">
-
-        <div class="footer-brand">
-
-            <span class="brand-mark">
-                AI
-            </span>
-
-            <span>
-                Aditya Islary
-            </span>
-
-        </div>
-
-        <div class="footer-center">
-            Student • Freelancer • Builder
-        </div>
-
-        <div class="footer-right">
-            © <span id="currentYear"></span> Aditya Islary
-        </div>
-
-    </div>
-
-</footer>
-
-
-<button
-    class="back-to-top"
-    id="backToTop"
-    type="button"
-    aria-label="Back to top"
->
-    ↑
-</button>
-
-
-<script src="app.js"></script>
-
+  <script src="app.js"></script>
 </body>
 </html>
