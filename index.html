@@ -1,363 +1,1161 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <meta name="description" content="Aditya Islary — Student, freelancer, and builder. Creating digital projects that actually work." />
-  <meta property="og:title" content="Aditya Islary | Student & Freelancer" />
-  <meta property="og:description" content="Student, freelancer, and builder of digital things." />
-  <meta property="og:type" content="website" />
-  <title>Aditya Islary | Student &amp; Freelancer</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Aditya Islary — student, freelancer, and builder creating digital projects and exploring technology."
+    >
+
+    <meta
+        name="author"
+        content="Aditya Islary"
+    >
+
+    <meta
+        property="og:title"
+        content="Aditya Islary | Student & Freelancer"
+    >
+
+    <meta
+        property="og:description"
+        content="Student, freelancer, and builder creating digital projects."
+    >
+
+    <meta
+        property="og:type"
+        content="website"
+    >
+
+    <title>Aditya Islary | Student & Freelancer</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-  <!-- NAVIGATION -->
-  <nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
-    <div class="nav__inner">
-      <a href="#home" class="nav__logo" aria-label="Aditya Islary home">AI.</a>
-      <ul class="nav__links" id="navLinks" role="list">
-        <li><a href="#home" class="nav__link">Home</a></li>
-        <li><a href="#about" class="nav__link">About</a></li>
-        <li><a href="#skills" class="nav__link">Skills</a></li>
-        <li><a href="#projects" class="nav__link">Projects</a></li>
-        <li><a href="#achievements" class="nav__link">Achievements</a></li>
-        <li><a href="#contact" class="nav__link">Contact</a></li>
-      </ul>
-      <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Open navigation menu">
-        <span class="nav__toggle-bar"></span>
-        <span class="nav__toggle-bar"></span>
-        <span class="nav__toggle-bar"></span>
-      </button>
+    <!-- Background -->
+    <div class="background">
+        <div class="background-grid"></div>
+        <div class="glow glow-one"></div>
+        <div class="glow glow-two"></div>
+        <div class="glow glow-three"></div>
     </div>
-  </nav>
 
-  <main>
 
-    <!-- HERO -->
-    <section class="hero" id="home" aria-label="Introduction">
-      <div class="hero__content">
-        <p class="hero__label">Student · Freelancer · Builder</p>
-        <h1 class="hero__heading">
-          Hi, I'm<br />
-          <span class="hero__name">Aditya Islary</span>
-        </h1>
-        <p class="hero__desc">
-          I build digital projects, experiment with technology,<br class="hero__br" />
-          and turn ideas into things that actually work.
-        </p>
-        <div class="hero__actions">
-          <a href="#projects" class="btn btn--primary">View My Work</a>
-          <a href="#contact" class="btn btn--ghost">Get In Touch</a>
-        </div>
-        <div class="hero__social">
-          <a href="https://github.com/Adityaislary11" class="hero__social-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
-            GitHub
-          </a>
-          <a href="mailto:adityaislary11@gmail.com" class="hero__social-link" aria-label="Send email">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
-            Email
-          </a>
-        </div>
-      </div>
-      <div class="hero__visual" aria-hidden="true">
-        <div class="hero__orb hero__orb--1"></div>
-        <div class="hero__orb hero__orb--2"></div>
-        <div class="hero__orb hero__orb--3"></div>
-        <div class="hero__glass">
-          <div class="hero__glass-row">
-            <span class="hero__glass-dot hero__glass-dot--r"></span>
-            <span class="hero__glass-dot hero__glass-dot--y"></span>
-            <span class="hero__glass-dot hero__glass-dot--g"></span>
-            <span class="hero__glass-file">portfolio.js</span>
-          </div>
-          <pre class="hero__code"><span class="c-kw">const</span> <span class="c-var">aditya</span> = {
-  <span class="c-key">role</span>: <span class="c-str">"builder"</span>,
-  <span class="c-key">focus</span>: [<span class="c-str">"web"</span>, <span class="c-str">"chess"</span>],
-  <span class="c-key">status</span>: <span class="c-str">"shipping"</span>,
-  <span class="c-key">available</span>: <span class="c-bool">true</span>
-};</pre>
-          <div class="hero__glass-footer">
-            <span class="hero__status-dot"></span>
-            <span class="hero__status-text">Open to work</span>
-          </div>
-        </div>
-      </div>
-    </section>
+    <!-- Navigation -->
+    <header class="navbar" id="navbar">
 
-    <!-- ABOUT -->
-    <section class="about section" id="about" aria-labelledby="about-heading">
-      <div class="container">
-        <div class="about__grid">
-          <div class="about__text reveal">
-            <h2 id="about-heading" class="section__heading">Someone who<br />builds &amp; learns.</h2>
-            <p class="about__para">
-              I'm Aditya Islary, a student and freelancer interested in technology,
-              software development, and building useful digital experiences.
-            </p>
-            <p class="about__para">
-              I enjoy taking an idea from a rough concept and turning it into a working project.
-              My current work includes ESMITRA, a smart incident-response platform,
-              and a browser-based chess engine.
-            </p>
-            <p class="about__para">
-              I'm continuously learning new technologies while improving my ability
-              to solve problems and build better software.
-            </p>
-          </div>
-          <div class="about__stats reveal reveal--delay">
-            <div class="stat-card">
-              <span class="stat-card__number">02</span>
-              <span class="stat-card__label">Major Projects</span>
-            </div>
-            <div class="stat-card">
-              <span class="stat-card__number">02</span>
-              <span class="stat-card__label">Regional Achievements</span>
-            </div>
-            <div class="stat-card stat-card--wide">
-              <span class="stat-card__number">∞</span>
-              <span class="stat-card__label">Things Left To Build</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+        <div class="container nav-inner">
 
-    <!-- SKILLS -->
-    <section class="skills section" id="skills" aria-labelledby="skills-heading">
-      <div class="container">
-        <h2 id="skills-heading" class="section__heading section__heading--center reveal">What I work with</h2>
-        <div class="skills__grid">
+            <a href="#home" class="brand" aria-label="Aditya Islary home">
+                <span class="brand-mark">A</span>
+                <span class="brand-name">ADITYA<span>.</span></span>
+            </a>
 
-          <article class="skill-card reveal">
-            <div class="skill-card__icon" aria-hidden="true">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-            </div>
-            <h3 class="skill-card__name">HTML</h3>
-            <p class="skill-card__desc">Semantic structure, accessibility, and solid document foundations.</p>
-          </article>
 
-          <article class="skill-card reveal">
-            <div class="skill-card__icon" aria-hidden="true">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
-            </div>
-            <h3 class="skill-card__name">CSS</h3>
-            <p class="skill-card__desc">Layouts, responsive design, animations, and visual polish.</p>
-          </article>
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                type="button"
+                aria-label="Open navigation"
+                aria-expanded="false"
+                aria-controls="navMenu"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
-          <article class="skill-card reveal">
-            <div class="skill-card__icon" aria-hidden="true">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            </div>
-            <h3 class="skill-card__name">JavaScript</h3>
-            <p class="skill-card__desc">Interactive UI, logic, DOM manipulation, and browser-side projects.</p>
-          </article>
 
-          <article class="skill-card reveal">
-            <div class="skill-card__icon" aria-hidden="true">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
-            </div>
-            <h3 class="skill-card__name">Firebase</h3>
-            <p class="skill-card__desc">Realtime databases, authentication, and cloud-hosted backends.</p>
-          </article>
+            <nav class="nav-menu" id="navMenu">
 
-          <article class="skill-card reveal">
-            <div class="skill-card__icon" aria-hidden="true">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-            </div>
-            <h3 class="skill-card__name">Git &amp; GitHub</h3>
-            <p class="skill-card__desc">Version control, repositories, and collaborative development workflows.</p>
-          </article>
+                <a href="#home" class="nav-link active">
+                    Home
+                </a>
 
-          <article class="skill-card reveal">
-            <div class="skill-card__icon" aria-hidden="true">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"/></svg>
-            </div>
-            <h3 class="skill-card__name">Problem Solving</h3>
-            <p class="skill-card__desc">Breaking down complex challenges and finding workable solutions.</p>
-          </article>
+                <a href="#about" class="nav-link">
+                    About
+                </a>
+
+                <a href="#skills" class="nav-link">
+                    Skills
+                </a>
+
+                <a href="#projects" class="nav-link">
+                    Projects
+                </a>
+
+                <a href="#achievements" class="nav-link">
+                    Achievements
+                </a>
+
+                <a href="#contact" class="nav-link nav-contact">
+                    Contact
+                </a>
+
+            </nav>
 
         </div>
-      </div>
-    </section>
 
-    <!-- PROJECTS -->
-    <section class="projects section" id="projects" aria-labelledby="projects-heading">
-      <div class="container">
-        <h2 id="projects-heading" class="section__heading reveal">Things I've built</h2>
+    </header>
 
-        <!-- ESMITRA — featured -->
-        <article class="project-card project-card--featured reveal" aria-labelledby="proj1-name">
-          <div class="project-card__meta">
-            <span class="project-card__num">01</span>
-            <span class="project-card__type">Platform</span>
-          </div>
-          <div class="project-card__body">
-            <div class="project-card__text">
-              <h3 class="project-card__name" id="proj1-name">ESMITRA</h3>
-              <p class="project-card__sub">Smart Incident Response</p>
-              <p class="project-card__desc">
-                A digital incident-reporting and management platform designed to connect
-                citizens, volunteers, and authorities through one unified system.
-              </p>
-              <ul class="project-card__tags" role="list">
-                <li class="tag">HTML</li>
-                <li class="tag">CSS</li>
-                <li class="tag">JavaScript</li>
-                <li class="tag">Firebase</li>
-              </ul>
-              <a href="https://sentinel-link-orpin.vercel.app" class="btn btn--primary btn--sm" target="_blank" rel="noopener noreferrer">
-                Visit Project ↗
-              </a>
-            </div>
-            <div class="project-card__visual" aria-hidden="true">
-              <div class="proj-visual">
-                <div class="proj-visual__ring proj-visual__ring--1"></div>
-                <div class="proj-visual__ring proj-visual__ring--2"></div>
-                <div class="proj-visual__ring proj-visual__ring--3"></div>
-                <div class="proj-visual__center">
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+
+    <main>
+
+        <!-- =========================================
+             HERO
+        ========================================== -->
+
+        <section class="hero section" id="home">
+
+            <div class="container hero-grid">
+
+                <div class="hero-content reveal">
+
+                    <div class="availability">
+                        <span class="availability-dot"></span>
+                        <span>Building something new</span>
+                    </div>
+
+
+                    <p class="eyebrow">
+                        STUDENT · FREELANCER · BUILDER
+                    </p>
+
+
+                    <h1>
+                        Turning
+                        <span class="gradient-text">ideas</span>
+                        into
+                        <span class="outline-text">reality.</span>
+                    </h1>
+
+
+                    <p class="hero-description">
+                        I'm <strong>Aditya Islary</strong> — a student and
+                        freelancer who enjoys building digital products,
+                        experimenting with technology, and solving problems
+                        through code.
+                    </p>
+
+
+                    <div class="hero-actions">
+
+                        <a
+                            href="#projects"
+                            class="button button-primary"
+                        >
+                            <span>Explore My Work</span>
+                            <span class="button-arrow">↗</span>
+                        </a>
+
+
+                        <a
+                            href="#contact"
+                            class="button button-ghost"
+                        >
+                            Get In Touch
+                        </a>
+
+                    </div>
+
+
+                    <div class="hero-socials">
+
+                        <a
+                            href="https://github.com/Adityaislary11"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="GitHub"
+                        >
+                            GitHub
+                            <span>↗</span>
+                        </a>
+
+                        <span class="social-separator"></span>
+
+                        <a
+                            href="mailto:adityaislary11@gmail.com"
+                            aria-label="Email"
+                        >
+                            Email
+                            <span>↗</span>
+                        </a>
+
+                    </div>
+
                 </div>
-              </div>
-            </div>
-          </div>
-        </article>
 
-        <!-- Chess Engine -->
-        <article class="project-card reveal reveal--delay" aria-labelledby="proj2-name">
-          <div class="project-card__meta">
-            <span class="project-card__num">02</span>
-            <span class="project-card__type">Engine</span>
-          </div>
-          <div class="project-card__body">
-            <div class="project-card__text">
-              <h3 class="project-card__name" id="proj2-name">Chess Engine</h3>
-              <p class="project-card__sub">Browser-Based Chess &amp; Engine</p>
-              <p class="project-card__desc">
-                A browser-based chess project combining a playable chessboard with
-                custom move generation and engine search logic.
-              </p>
-              <ul class="project-card__tags" role="list">
-                <li class="tag">JavaScript</li>
-                <li class="tag">Chess.js</li>
-                <li class="tag">Search</li>
-                <li class="tag">FEN</li>
-              </ul>
-              <a href="https://github.com/Adityaislary11" class="btn btn--ghost btn--sm" target="_blank" rel="noopener noreferrer">
-                View GitHub ↗
-              </a>
-            </div>
-            <div class="project-card__visual" aria-hidden="true">
-              <div class="chess-visual">
-                <div class="chess-board">
-                  <div class="chess-board__grid">
-                    <span class="cb cb--w"></span><span class="cb cb--b"></span><span class="cb cb--w"></span><span class="cb cb--b"></span>
-                    <span class="cb cb--b"></span><span class="cb cb--w"></span><span class="cb cb--b"></span><span class="cb cb--w"></span>
-                    <span class="cb cb--w"></span><span class="cb cb--b"></span><span class="cb cb--w"></span><span class="cb cb--b"></span>
-                    <span class="cb cb--b"></span><span class="cb cb--w"></span><span class="cb cb--b"></span><span class="cb cb--w"></span>
-                  </div>
+
+                <!-- Hero visual -->
+
+                <div class="hero-visual reveal">
+
+                    <div class="visual-orbit orbit-one"></div>
+                    <div class="visual-orbit orbit-two"></div>
+
+
+                    <div class="code-card">
+
+                        <div class="code-header">
+
+                            <div class="window-controls">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+
+                            <span class="code-title">
+                                aditya.js
+                            </span>
+
+                            <span class="code-status">
+                                ●
+                            </span>
+
+                        </div>
+
+
+                        <div class="code-body">
+
+                            <div class="code-line">
+                                <span class="line-number">01</span>
+                                <span class="code-keyword">const</span>
+                                <span class="code-variable">developer</span>
+                                <span>=</span>
+                                <span class="code-bracket">{</span>
+                            </div>
+
+
+                            <div class="code-line indent">
+                                <span class="line-number">02</span>
+                                <span class="code-property">name:</span>
+                                <span class="code-string">
+                                    "Aditya Islary"
+                                </span>
+                                <span>,</span>
+                            </div>
+
+
+                            <div class="code-line indent">
+                                <span class="line-number">03</span>
+                                <span class="code-property">role:</span>
+                                <span class="code-string">
+                                    "Builder"
+                                </span>
+                                <span>,</span>
+                            </div>
+
+
+                            <div class="code-line indent">
+                                <span class="line-number">04</span>
+                                <span class="code-property">projects:</span>
+                                <span class="code-number">
+                                    2
+                                </span>
+                                <span>,</span>
+                            </div>
+
+
+                            <div class="code-line indent">
+                                <span class="line-number">05</span>
+                                <span class="code-property">
+                                    learning:
+                                </span>
+                                <span class="code-string">
+                                    "always"
+                                </span>
+                            </div>
+
+
+                            <div class="code-line">
+                                <span class="line-number">06</span>
+                                <span class="code-bracket">}</span>
+                            </div>
+
+
+                            <div class="code-line space">
+                                <span class="line-number">07</span>
+                            </div>
+
+
+                            <div class="code-line">
+                                <span class="line-number">08</span>
+                                <span class="code-keyword">function</span>
+                                <span class="code-function">
+                                    build
+                                </span>
+                                <span>() {</span>
+                            </div>
+
+
+                            <div class="code-line indent">
+                                <span class="line-number">09</span>
+                                <span class="code-keyword">return</span>
+                                <span class="code-string">
+                                    "something useful";
+                                </span>
+                            </div>
+
+
+                            <div class="code-line">
+                                <span class="line-number">10</span>
+                                <span>}</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="floating-card card-project">
+
+                        <span class="floating-icon">◆</span>
+
+                        <div>
+                            <small>Featured Project</small>
+                            <strong>ESMITRA</strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="floating-card card-achievement">
+
+                        <span class="achievement-symbol">02</span>
+
+                        <div>
+                            <small>Regional</small>
+                            <strong>Achievements</strong>
+                        </div>
+
+                    </div>
+
                 </div>
-              </div>
+
             </div>
-          </div>
-        </article>
 
-      </div>
-    </section>
 
-    <!-- ACHIEVEMENTS -->
-    <section class="achievements section" id="achievements" aria-labelledby="achievements-heading">
-      <div class="container">
-        <h2 id="achievements-heading" class="section__heading section__heading--center reveal">Recognised work</h2>
-        <div class="achievements__list">
+            <div class="scroll-indicator">
 
-          <article class="ach-card reveal" aria-labelledby="ach1-title">
-            <div class="ach-card__medal" aria-label="Silver medal">🥈</div>
-            <div class="ach-card__body">
-              <span class="ach-card__place">2nd Place</span>
-              <h3 class="ach-card__title" id="ach1-title">Regional Jigyasa 2025–26</h3>
-              <time class="ach-card__date" datetime="2025-11">November 25–26, 2025</time>
+                <span class="scroll-line"></span>
+
+                <span>
+                    SCROLL TO EXPLORE
+                </span>
+
             </div>
-            <div class="ach-card__line" aria-hidden="true"></div>
-          </article>
 
-          <article class="ach-card reveal reveal--delay" aria-labelledby="ach2-title">
-            <div class="ach-card__medal" aria-label="Bronze medal">🥉</div>
-            <div class="ach-card__body">
-              <span class="ach-card__place">3rd Place</span>
-              <h3 class="ach-card__title" id="ach2-title">Regional Anveshana 2025–26</h3>
-              <time class="ach-card__date" datetime="2026-02">February 2026</time>
+        </section>
+
+
+
+        <!-- =========================================
+             ABOUT
+        ========================================== -->
+
+        <section class="section about" id="about">
+
+            <div class="container">
+
+                <div class="section-header reveal">
+
+                    <span class="section-number">
+                        01
+                    </span>
+
+                    <div>
+                        <p class="eyebrow">
+                            ABOUT ME
+                        </p>
+
+                        <h2>
+                            Curious by nature.
+                            <span>Builder by choice.</span>
+                        </h2>
+                    </div>
+
+                </div>
+
+
+                <div class="about-grid">
+
+                    <div class="about-main reveal">
+
+                        <p class="large-text">
+                            I like understanding how things work —
+                            and then trying to build them myself.
+                        </p>
+
+
+                        <p>
+                            I'm Aditya Islary, a student and freelancer
+                            interested in technology, software development,
+                            and creating useful digital experiences.
+                        </p>
+
+
+                        <p>
+                            My approach is simple: learn something, experiment
+                            with it, and turn what I learn into something real.
+                            That has led me to projects ranging from
+                            incident-response platforms to chess engines.
+                        </p>
+
+
+                        <p>
+                            I'm still learning, but every project is another
+                            opportunity to push a little further.
+                        </p>
+
+                    </div>
+
+
+                    <div class="about-stats reveal">
+
+                        <div class="stat">
+
+                            <span class="stat-number">
+                                02
+                            </span>
+
+                            <span class="stat-label">
+                                Major Projects
+                            </span>
+
+                        </div>
+
+
+                        <div class="stat">
+
+                            <span class="stat-number">
+                                02
+                            </span>
+
+                            <span class="stat-label">
+                                Regional Achievements
+                            </span>
+
+                        </div>
+
+
+                        <div class="stat">
+
+                            <span class="stat-number">
+                                ∞
+                            </span>
+
+                            <span class="stat-label">
+                                Things Left To Build
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
             </div>
-            <div class="ach-card__line" aria-hidden="true"></div>
-          </article>
+
+        </section>
+
+
+
+        <!-- =========================================
+             SKILLS
+        ========================================== -->
+
+        <section class="section skills" id="skills">
+
+            <div class="container">
+
+                <div class="section-header reveal">
+
+                    <span class="section-number">
+                        02
+                    </span>
+
+                    <div>
+
+                        <p class="eyebrow">
+                            TOOLKIT
+                        </p>
+
+                        <h2>
+                            Things I use to
+                            <span>build.</span>
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="skills-grid">
+
+                    <article class="skill-card reveal">
+
+                        <span class="skill-index">01</span>
+
+                        <div class="skill-icon">
+                            &lt;/&gt;
+                        </div>
+
+                        <h3>HTML</h3>
+
+                        <p>
+                            Semantic structure and accessible web
+                            experiences.
+                        </p>
+
+                    </article>
+
+
+                    <article class="skill-card reveal">
+
+                        <span class="skill-index">02</span>
+
+                        <div class="skill-icon">
+                            #
+                        </div>
+
+                        <h3>CSS</h3>
+
+                        <p>
+                            Responsive layouts, visual systems,
+                            and polished interfaces.
+                        </p>
+
+                    </article>
+
+
+                    <article class="skill-card reveal">
+
+                        <span class="skill-index">03</span>
+
+                        <div class="skill-icon">
+                            JS
+                        </div>
+
+                        <h3>JavaScript</h3>
+
+                        <p>
+                            Logic, interaction, functionality,
+                            and browser-based applications.
+                        </p>
+
+                    </article>
+
+
+                    <article class="skill-card reveal">
+
+                        <span class="skill-index">04</span>
+
+                        <div class="skill-icon">
+                            F
+                        </div>
+
+                        <h3>Firebase</h3>
+
+                        <p>
+                            Authentication and cloud-backed
+                            web application functionality.
+                        </p>
+
+                    </article>
+
+
+                    <article class="skill-card reveal">
+
+                        <span class="skill-index">05</span>
+
+                        <div class="skill-icon">
+                            &lt;G&gt;
+                        </div>
+
+                        <h3>Git & GitHub</h3>
+
+                        <p>
+                            Version control and collaborative
+                            project management.
+                        </p>
+
+                    </article>
+
+
+                    <article class="skill-card reveal">
+
+                        <span class="skill-index">06</span>
+
+                        <div class="skill-icon">
+                            ∑
+                        </div>
+
+                        <h3>Problem Solving</h3>
+
+                        <p>
+                            Breaking complex ideas into smaller,
+                            workable solutions.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================
+             PROJECTS
+        ========================================== -->
+
+        <section class="section projects" id="projects">
+
+            <div class="container">
+
+                <div class="section-header reveal">
+
+                    <span class="section-number">
+                        03
+                    </span>
+
+                    <div>
+
+                        <p class="eyebrow">
+                            SELECTED WORK
+                        </p>
+
+                        <h2>
+                            Ideas turned into
+                            <span>projects.</span>
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="projects-list">
+
+
+                    <!-- ESMITRA -->
+
+                    <article class="project reveal featured">
+
+                        <div class="project-number">
+                            01
+                        </div>
+
+
+                        <div class="project-content">
+
+                            <div class="project-meta">
+
+                                <span>
+                                    WEB PLATFORM
+                                </span>
+
+                                <span>
+                                    2025 — PRESENT
+                                </span>
+
+                            </div>
+
+
+                            <h3>
+                                ESMITRA
+                            </h3>
+
+
+                            <p class="project-subtitle">
+                                Smart Incident Response
+                            </p>
+
+
+                            <p class="project-description">
+                                A digital incident-reporting and management
+                                platform designed to connect citizens,
+                                volunteers, and authorities through one
+                                system.
+                            </p>
+
+
+                            <div class="tech-list">
+
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                                <span>Firebase</span>
+
+                            </div>
+
+
+                            <a
+                                href="https://sentinel-link-orpin.vercel.app"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="project-button"
+                            >
+                                <span>Visit Project</span>
+                                <span>↗</span>
+                            </a>
+
+                        </div>
+
+
+                        <div class="project-visual esmitra-visual">
+
+                            <div class="project-glow"></div>
+
+                            <div class="dashboard-preview">
+
+                                <div class="preview-top">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+
+                                <div class="preview-content">
+
+                                    <div class="preview-sidebar"></div>
+
+                                    <div class="preview-main">
+
+                                        <div class="preview-line large"></div>
+                                        <div class="preview-line"></div>
+
+                                        <div class="preview-cards">
+
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- CHESS ENGINE -->
+
+                    <article class="project reveal">
+
+                        <div class="project-number">
+                            02
+                        </div>
+
+
+                        <div class="project-content">
+
+                            <div class="project-meta">
+
+                                <span>
+                                    SOFTWARE / GAME
+                                </span>
+
+                                <span>
+                                    IN DEVELOPMENT
+                                </span>
+
+                            </div>
+
+
+                            <h3>
+                                Chess Engine
+                            </h3>
+
+
+                            <p class="project-subtitle">
+                                Browser-Based Chess & Engine
+                            </p>
+
+
+                            <p class="project-description">
+                                A browser-based chess project combining
+                                a playable chessboard with custom move
+                                generation and engine search logic.
+                            </p>
+
+
+                            <div class="tech-list">
+
+                                <span>JavaScript</span>
+                                <span>Chess.js</span>
+                                <span>Search</span>
+                                <span>FEN</span>
+
+                            </div>
+
+
+                            <a
+                                href="https://github.com/Adityaislary11"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="project-button"
+                            >
+                                <span>View GitHub</span>
+                                <span>↗</span>
+                            </a>
+
+                        </div>
+
+
+                        <div class="project-visual chess-visual">
+
+                            <div class="chess-board">
+
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================
+             ACHIEVEMENTS
+        ========================================== -->
+
+        <section
+            class="section achievements"
+            id="achievements"
+        >
+
+            <div class="container">
+
+                <div class="section-header reveal">
+
+                    <span class="section-number">
+                        04
+                    </span>
+
+                    <div>
+
+                        <p class="eyebrow">
+                            ACHIEVEMENTS
+                        </p>
+
+                        <h2>
+                            Milestones along
+                            <span>the way.</span>
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="achievements-list">
+
+
+                    <article class="achievement reveal">
+
+                        <div class="achievement-rank">
+                            02
+                        </div>
+
+
+                        <div class="achievement-info">
+
+                            <span class="achievement-year">
+                                2025 — 26
+                            </span>
+
+                            <h3>
+                                Regional Jigyasa
+                            </h3>
+
+                            <p>
+                                2nd Place — Regional Level
+                            </p>
+
+                            <span class="achievement-date">
+                                November 25–26, 2025
+                            </span>
+
+                        </div>
+
+
+                        <div class="medal">
+                            🥈
+                        </div>
+
+                    </article>
+
+
+
+                    <article class="achievement reveal">
+
+                        <div class="achievement-rank">
+                            03
+                        </div>
+
+
+                        <div class="achievement-info">
+
+                            <span class="achievement-year">
+                                2025 — 26
+                            </span>
+
+                            <h3>
+                                Regional Anveshana
+                            </h3>
+
+                            <p>
+                                3rd Place — Regional Level
+                            </p>
+
+                            <span class="achievement-date">
+                                February 2026
+                            </span>
+
+                        </div>
+
+
+                        <div class="medal">
+                            🥉
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================
+             CONTACT
+        ========================================== -->
+
+        <section class="section contact" id="contact">
+
+            <div class="container">
+
+                <div class="contact-box reveal">
+
+                    <div class="contact-heading">
+
+                        <p class="eyebrow">
+                            HAVE A PROJECT IN MIND?
+                        </p>
+
+                        <h2>
+                            Let's build
+                            <span>something.</span>
+                        </h2>
+
+                        <p>
+                            Whether it's an idea, a collaboration,
+                            or just a conversation about technology,
+                            I'm always open to hearing from you.
+                        </p>
+
+                    </div>
+
+
+                    <div class="contact-links">
+
+                        <a
+                            href="mailto:adityaislary11@gmail.com"
+                            class="contact-link"
+                        >
+
+                            <span class="contact-type">
+                                EMAIL
+                            </span>
+
+                            <strong>
+                                adityaislary11@gmail.com
+                            </strong>
+
+                            <span class="contact-arrow">
+                                ↗
+                            </span>
+
+                        </a>
+
+
+                        <a
+                            href="tel:+919401525404"
+                            class="contact-link"
+                        >
+
+                            <span class="contact-type">
+                                PHONE
+                            </span>
+
+                            <strong>
+                                +91 94015 25404
+                            </strong>
+
+                            <span class="contact-arrow">
+                                ↗
+                            </span>
+
+                        </a>
+
+
+                        <a
+                            href="https://github.com/Adityaislary11"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="contact-link"
+                        >
+
+                            <span class="contact-type">
+                                GITHUB
+                            </span>
+
+                            <strong>
+                                @Adityaislary11
+                            </strong>
+
+                            <span class="contact-arrow">
+                                ↗
+                            </span>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+
+    <footer class="footer">
+
+        <div class="container footer-inner">
+
+            <a href="#home" class="footer-brand">
+                AI<span>.</span>
+            </a>
+
+
+            <p>
+                © 2026 Aditya Islary
+            </p>
+
+
+            <a href="#home" class="back-top">
+                BACK TO TOP
+                <span>↑</span>
+            </a>
 
         </div>
-      </div>
-    </section>
 
-    <!-- CONTACT -->
-    <section class="contact section" id="contact" aria-labelledby="contact-heading">
-      <div class="container">
-        <div class="contact__inner">
-          <div class="contact__text reveal">
-            <h2 id="contact-heading" class="section__heading">Let's build something.</h2>
-            <p class="contact__sub">Have an idea, project, or opportunity? Feel free to reach out.</p>
-          </div>
-          <div class="contact__cards">
+    </footer>
 
-            <a href="mailto:adityaislary11@gmail.com" class="contact-card reveal" aria-label="Send an email to Aditya">
-              <div class="contact-card__icon" aria-hidden="true">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
-              </div>
-              <div class="contact-card__body">
-                <span class="contact-card__label">Email</span>
-                <span class="contact-card__value">adityaislary11@gmail.com</span>
-              </div>
-              <span class="contact-card__arrow" aria-hidden="true">↗</span>
-            </a>
 
-            <a href="tel:+919401525404" class="contact-card reveal reveal--delay" aria-label="Call Aditya">
-              <div class="contact-card__icon" aria-hidden="true">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.42 2 2 0 0 1 3.59 1.24h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 15.92z"/></svg>
-              </div>
-              <div class="contact-card__body">
-                <span class="contact-card__label">Phone</span>
-                <span class="contact-card__value">+91 94015 25404</span>
-              </div>
-              <span class="contact-card__arrow" aria-hidden="true">↗</span>
-            </a>
+    <script src="app.js"></script>
 
-            <a href="https://github.com/Adityaislary11" class="contact-card reveal reveal--delay-2" target="_blank" rel="noopener noreferrer" aria-label="View GitHub profile">
-              <div class="contact-card__icon" aria-hidden="true">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
-              </div>
-              <div class="contact-card__body">
-                <span class="contact-card__label">GitHub</span>
-                <span class="contact-card__value">@Adityaislary11</span>
-              </div>
-              <span class="contact-card__arrow" aria-hidden="true">↗</span>
-            </a>
-
-          </div>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="footer" role="contentinfo">
-    <div class="container footer__inner">
-      <span class="footer__logo">AI.</span>
-      <p class="footer__copy">© 2026 Aditya Islary. Built with HTML, CSS &amp; JavaScript.</p>
-      <a href="#home" class="footer__top" aria-label="Back to top">Back to top ↑</a>
-    </div>
-  </footer>
-
-  <script src="app.js"></script>
 </body>
 </html>
