@@ -2,1274 +2,600 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta
         name="description"
-        content="Aditya Islary — student freelancer building ESMITRA, a smart incident response platform, and a browser-based chess engine."
+        content="Aditya Islary — student freelancer exploring programming, web development, AI, and software projects."
     >
 
-    <meta
-        name="theme-color"
-        content="#050a12"
-    >
+    <meta name="theme-color" content="#080D16">
 
     <title>Aditya Islary | Student Freelancer</title>
 
-    <link
-        rel="stylesheet"
-        href="style.css"
-    >
+    <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="app.js" defer></script>
 </head>
 
 <body>
 
-    <div class="site-bg"></div>
+    <a class="skip-link" href="#main">Skip to content</a>
 
-    <!-- ================================
-         NAVIGATION
-    ================================= -->
+    <!-- Navigation -->
+    <header class="site-header">
+        <div class="container nav-container">
 
-    <header class="navbar" id="navbar">
-
-        <div class="container nav-inner">
-
-            <a href="#home" class="brand">
-                <span class="brand-icon">AI</span>
-                <span>Aditya Islary</span>
+            <a class="brand" href="#home" aria-label="Aditya Islary home">
+                <span class="brand-mark">A</span>
+                <span class="brand-name">Aditya Islary</span>
             </a>
 
             <button
                 class="menu-toggle"
                 id="menuToggle"
+                type="button"
                 aria-label="Open navigation menu"
                 aria-expanded="false"
+                aria-controls="navMenu"
             >
-                <span></span>
                 <span></span>
                 <span></span>
             </button>
 
-            <nav class="nav-menu" id="navMenu">
-
-                <a href="#home" class="nav-link active">
-                    Home
-                </a>
-
-                <a href="#about" class="nav-link">
-                    About
-                </a>
-
-                <a href="#skills" class="nav-link">
-                    Skills
-                </a>
-
-                <a href="#projects" class="nav-link">
-                    Projects
-                </a>
-
-                <a href="#achievements" class="nav-link">
-                    Achievements
-                </a>
-
-                <a href="#contact" class="nav-link">
-                    Contact
-                </a>
-
+            <nav class="nav-menu" id="navMenu" aria-label="Main navigation">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#milestones">Milestones</a>
+                <a href="#contact" class="nav-contact">Contact <span aria-hidden="true">↗</span></a>
             </nav>
 
         </div>
-
     </header>
 
+    <main id="main">
 
-    <main>
-
-        <!-- ================================
-             HERO
-        ================================= -->
-
-        <section class="hero" id="home">
-
+        <!-- Hero -->
+        <section class="hero section" id="home">
             <div class="container hero-grid">
 
-                <div class="hero-content reveal">
+                <div class="hero-content">
 
-                    <div class="availability">
-                        <span></span>
+                    <div class="availability-label">
+                        <span class="status-dot" aria-hidden="true"></span>
                         Student Freelancer
                     </div>
 
-                    <p class="eyebrow">
-                        WEB • SOFTWARE • EXPERIMENTATION
-                    </p>
+                    <p class="hero-eyebrow">LEARNING · BUILDING · IMPROVING</p>
 
                     <h1>
-                        Building
-                        <em>digital systems.</em>
+                        Turning ideas into
+                        <span class="text-accent">real projects.</span>
                     </h1>
 
-                    <p class="hero-text">
-                        I'm Aditya Islary, a student freelancer focused on
-                        building practical software, experimenting with
-                        technology, and turning ideas into functional digital
-                        products.
+                    <p class="hero-description">
+                        I'm Aditya Islary, a student freelancer interested in
+                        programming, web development, AI, and building practical
+                        software projects while developing my skills.
                     </p>
 
-                    <div class="hero-buttons">
-
-                        <a
-                            href="#projects"
-                            class="button primary"
-                        >
-                            View Projects
+                    <div class="hero-actions">
+                        <a class="button button-primary" href="#projects">
+                            Explore my projects
+                            <span aria-hidden="true">↗</span>
                         </a>
 
-                       <a
-    href="https://mail.google.com/mail/?view=cm&fs=1&to=adityaislary11@gmail.com&su=Portfolio%20Contact"
-    target="_blank"
-    rel="noopener noreferrer"
->
-    Contact Me
-                       </a>
+                        <a class="button button-secondary" href="#contact">
+                            Get in touch
+                        </a>
                     </div>
 
-                    <div class="hero-stats">
-
-                        <div>
-                            <strong>02</strong>
-                            <span>Featured Projects</span>
-                        </div>
-
-                        <div>
-                            <strong>02</strong>
-                            <span>Regional Achievements</span>
-                        </div>
-
-                        <div>
-                            <strong>01</strong>
-                            <span>Student Freelancer</span>
-                        </div>
-
+                    <div class="hero-meta">
+                        <span>Student</span>
+                        <span class="meta-separator" aria-hidden="true"></span>
+                        <span>Independent projects</span>
+                        <span class="meta-separator" aria-hidden="true"></span>
+                        <span>Continuous learning</span>
                     </div>
 
                 </div>
 
+                <!-- Decorative illustration: built with CSS, not an image -->
+                <div class="hero-visual" aria-hidden="true">
 
-                <div class="hero-panel reveal">
+                    <div class="visual-topline">
+                        <span>MY WORKSPACE</span>
+                        <span class="visual-indicator"></span>
+                    </div>
 
                     <div class="code-window">
-
-                        <div class="window-bar">
-
+                        <div class="code-window-header">
                             <div class="window-dots">
-                                <i></i>
-                                <i></i>
-                                <i></i>
+                                <span></span>
+                                <span></span>
+                                <span></span>
                             </div>
-
-                            <span>aditya.build</span>
-
-                            <small>ONLINE</small>
-
+                            <span class="window-filename">building.js</span>
                         </div>
 
                         <div class="code-content">
-
-                            <div>
-                                <b>const</b>
-                                developer = {
-                            </div>
-
-                            <div class="indent">
-                                name:
-                                <strong>"Aditya Islary"</strong>,
-                            </div>
-
-                            <div class="indent">
-                                role:
-                                <strong>"Student Freelancer"</strong>,
-                            </div>
-
-                            <div class="indent">
-                                focus:
-                                <strong>"Building"</strong>,
-                            </div>
-
-                            <div class="indent">
-                                projects: [
-                            </div>
-
-                            <div class="double">
-                                <strong>"ESMITRA"</strong>,
-                            </div>
-
-                            <div class="double">
-                                <strong>"Chess Engine"</strong>
-                            </div>
-
-                            <div class="indent">
-                                ],
-                            </div>
-
-                            <div class="indent">
-                                mindset:
-                                <strong>"Learn → Build → Improve"</strong>
-                            </div>
-
-                            <div>
-                                };
-                            </div>
-
-                            <br>
-
-                            <div>
-                                <b>system</b>.status();
-                                <strong>// ready</strong>
-                                <span class="cursor"></span>
-                            </div>
-
+                            <p><span class="code-muted">01</span> <span class="code-purple">const</span> <span class="code-blue">journey</span> = {</p>
+                            <p><span class="code-muted">02</span> &nbsp; learning: <span class="code-green">true</span>,</p>
+                            <p><span class="code-muted">03</span> &nbsp; building: <span class="code-green">true</span>,</p>
+                            <p><span class="code-muted">04</span> &nbsp; improving: <span class="code-green">true</span></p>
+                            <p><span class="code-muted">05</span> };</p>
+                            <p class="code-spacer"><span class="code-muted">06</span></p>
+                            <p><span class="code-muted">07</span> <span class="code-purple">while</span> (journey.learning) {</p>
+                            <p><span class="code-muted">08</span> &nbsp; buildSomething();</p>
+                            <p><span class="code-muted">09</span> }</p>
                         </div>
-
                     </div>
 
-                    <div class="hero-panel-footer">
-                        <span>BUILDING IN PUBLIC</span>
-                        <span>01 / 01</span>
+                    <div class="visual-footer">
+                        <span class="visual-footer-icon">&lt;/&gt;</span>
+                        <div>
+                            <strong>One project at a time.</strong>
+                            <p>Progress over perfection.</p>
+                        </div>
                     </div>
 
                 </div>
 
             </div>
-
         </section>
 
-
-        <!-- ================================
-             ABOUT
-        ================================= -->
-
-        <section class="section" id="about">
-
+        <!-- About -->
+        <section class="section about-section" id="about">
             <div class="container">
 
-                <div class="section-intro reveal">
+                <div class="section-heading">
+                    <p class="section-label">01 / ABOUT</p>
+                    <h2>A little about me.</h2>
+                    <p class="section-description">
+                        My interests, what I'm learning, and what I'm working on.
+                    </p>
+                </div>
 
-                    <span class="section-index">
-                        01
-                    </span>
+                <div class="about-grid">
 
-                    <div>
-
-                        <p class="eyebrow">
-                            PROFILE
+                    <div class="about-copy">
+                        <p>
+                            I'm a student who enjoys exploring how software works
+                            and turning ideas into working prototypes.
                         </p>
 
-                        <h2>
-                            About me.
-                        </h2>
+                        <p>
+                            My current interests include web development,
+                            programming logic, artificial intelligence, and
+                            experimenting with software projects.
+                        </p>
+
+                        <p>
+                            I'm still learning, so I treat each project as an
+                            opportunity to improve, solve problems, and understand
+                            the technology behind what I build.
+                        </p>
+                    </div>
+
+                    <div class="about-highlights">
+
+                        <article class="highlight-card">
+                            <span class="highlight-number">01</span>
+                            <div>
+                                <h3>Learn by building</h3>
+                                <p>Apply concepts through practical projects.</p>
+                            </div>
+                        </article>
+
+                        <article class="highlight-card">
+                            <span class="highlight-number">02</span>
+                            <div>
+                                <h3>Explore new ideas</h3>
+                                <p>Experiment with different tools and approaches.</p>
+                            </div>
+                        </article>
+
+                        <article class="highlight-card">
+                            <span class="highlight-number">03</span>
+                            <div>
+                                <h3>Keep improving</h3>
+                                <p>Learn from mistakes and refine my work.</p>
+                            </div>
+                        </article>
 
                     </div>
 
                 </div>
-
-
-                <div class="about-layout">
-
-                    <div class="about-copy reveal">
-
-                        <p class="about-lead">
-                            I like taking complicated ideas and turning
-                            them into systems that people can actually use.
-                        </p>
-
-                        <p>
-                            I'm a student freelancer interested in software
-                            development, web technologies, artificial
-                            intelligence, and problem solving.
-                        </p>
-
-                        <p>
-                            My current work includes ESMITRA, a smart
-                            incident-response concept designed to connect
-                            people reporting incidents with the people
-                            responsible for responding to them.
-                        </p>
-
-                        <p>
-                            I'm also building a browser-based chess engine
-                            to explore move generation, search, evaluation,
-                            and the underlying logic behind chess programs.
-                        </p>
-
-                    </div>
-
-
-                    <div class="about-numbers reveal">
-
-                        <div class="number-card">
-                            <strong>02</strong>
-                            <span>Featured Projects</span>
-                        </div>
-
-                        <div class="number-card">
-                            <strong>2025–26</strong>
-                            <span>Recent Achievement Period</span>
-                        </div>
-
-                        <div class="number-card">
-                            <strong>∞</strong>
-                            <span>Things left to learn</span>
-                        </div>
-
-                    </div>
-
-                </div>
-
             </div>
-
         </section>
 
-
-        <!-- ================================
-             SKILLS
-        ================================= -->
-
-        <section class="section" id="skills">
-
+        <!-- Skills -->
+        <section class="section skills-section" id="skills">
             <div class="container">
 
-                <div class="section-intro reveal">
-
-                    <span class="section-index">
-                        02
-                    </span>
-
-                    <div>
-
-                        <p class="eyebrow">
-                            CAPABILITIES
-                        </p>
-
-                        <h2>
-                            What I work with.
-                        </h2>
-
-                    </div>
-
+                <div class="section-heading">
+                    <p class="section-label">02 / SKILLS</p>
+                    <h2>What I work with.</h2>
+                    <p class="section-description">
+                        Areas I'm exploring and developing through practice.
+                    </p>
                 </div>
-
 
                 <div class="skills-grid">
 
-                    <article class="skill-card reveal">
-
-                        <span class="skill-number">
-                            01
-                        </span>
-
-                        <div class="skill-icon">
-                            WEB
-                        </div>
-
-                        <h3>
-                            Web Development
-                        </h3>
-
+                    <article class="skill-card">
+                        <div class="skill-icon" aria-hidden="true">&lt;/&gt;</div>
+                        <h3>Programming &amp; Logic</h3>
                         <p>
-                            Building responsive interfaces and interactive
-                            web experiences with a focus on structure,
-                            usability, and clean implementation.
+                            Writing code, understanding algorithms, and breaking
+                            problems into manageable steps.
                         </p>
+                        <div class="skill-tags">
+                            <span>Python</span>
+                            <span>JavaScript</span>
+                            <span>Problem solving</span>
+                        </div>
+                    </article>
 
-                        <div class="tags">
+                    <article class="skill-card">
+                        <div class="skill-icon" aria-hidden="true">◇</div>
+                        <h3>Web Development</h3>
+                        <p>
+                            Building website layouts, styling interfaces, and
+                            adding interactive features.
+                        </p>
+                        <div class="skill-tags">
                             <span>HTML</span>
                             <span>CSS</span>
                             <span>JavaScript</span>
-                            <span>Responsive UI</span>
                         </div>
-
                     </article>
 
-
-                    <article class="skill-card reveal">
-
-                        <span class="skill-number">
-                            02
-                        </span>
-
-                        <div class="skill-icon">
-                            JS
-                        </div>
-
-                        <h3>
-                            JavaScript
-                        </h3>
-
+                    <article class="skill-card">
+                        <div class="skill-icon" aria-hidden="true">⌘</div>
+                        <h3>AI &amp; Machine Learning</h3>
                         <p>
-                            Creating interactive browser applications and
-                            experimenting with application logic, state,
-                            algorithms, and dynamic interfaces.
+                            Exploring AI concepts, basic model logic, and
+                            experimental intelligent software.
                         </p>
-
-                        <div class="tags">
-                            <span>DOM</span>
-                            <span>ES6+</span>
-                            <span>Logic</span>
-                            <span>APIs</span>
+                        <div class="skill-tags">
+                            <span>AI concepts</span>
+                            <span>Python</span>
+                            <span>NumPy</span>
                         </div>
-
                     </article>
 
-
-                    <article class="skill-card reveal">
-
-                        <span class="skill-number">
-                            03
-                        </span>
-
-                        <div class="skill-icon">
-                            AI
-                        </div>
-
-                        <h3>
-                            AI & Problem Solving
-                        </h3>
-
+                    <article class="skill-card">
+                        <div class="skill-icon" aria-hidden="true">⚙</div>
+                        <h3>Software Engineering</h3>
                         <p>
-                            Exploring artificial intelligence concepts,
-                            computational thinking, automation, and using
-                            technology to approach practical problems.
+                            Structuring projects, testing functionality, fixing
+                            bugs, and improving code.
                         </p>
-
-                        <div class="tags">
-                            <span>AI</span>
-                            <span>Algorithms</span>
-                            <span>Logic</span>
-                            <span>Experimentation</span>
-                        </div>
-
-                    </article>
-
-
-                    <article class="skill-card reveal">
-
-                        <span class="skill-number">
-                            04
-                        </span>
-
-                        <div class="skill-icon">
-                            ENG
-                        </div>
-
-                        <h3>
-                            Software Engineering
-                        </h3>
-
-                        <p>
-                            Learning how larger software systems are
-                            structured, debugged, improved, and developed
-                            incrementally.
-                        </p>
-
-                        <div class="tags">
+                        <div class="skill-tags">
                             <span>Git</span>
                             <span>GitHub</span>
                             <span>Debugging</span>
-                            <span>Architecture</span>
                         </div>
-
                     </article>
 
                 </div>
-
             </div>
-
         </section>
 
-
-        <!-- ================================
-             PROJECTS
-        ================================= -->
-
-        <section class="section" id="projects">
-
+        <!-- Projects -->
+        <section class="section projects-section" id="projects">
             <div class="container">
 
-                <div class="section-intro reveal">
-
-                    <span class="section-index">
-                        03
-                    </span>
-
-                    <div>
-
-                        <p class="eyebrow">
-                            SELECTED WORK
-                        </p>
-
-                        <h2>
-                            Projects.
-                        </h2>
-
-                    </div>
-
+                <div class="section-heading">
+                    <p class="section-label">03 / PROJECTS</p>
+                    <h2>Things I'm building.</h2>
+                    <p class="section-description">
+                        Ongoing projects where I'm putting ideas into practice.
+                    </p>
                 </div>
 
+                <div class="projects-grid">
 
-                <div class="projects">
+                    <!-- ESMITRA: image placeholder intentionally not rendered -->
+                    <article class="project-card">
 
+                        <div class="project-visual project-visual-network">
+                            <!-- Future asset placeholder:
+                                 assets/images/projects/esmitra-preview.png
+                                 Do not display until a genuine preview is available. -->
 
-                    <!-- ESMITRA -->
-
-                    <article class="project reveal">
-
-                        <div class="project-visual esmitra-visual">
-
-                            <div class="connectivity-grid"></div>
-
-
-                            <div class="connection-line line-1"></div>
-                            <div class="connection-line line-2"></div>
-                            <div class="connection-line line-3"></div>
-                            <div class="connection-line line-4"></div>
-
-
-                            <div class="network-node citizen-node">
-
-                                <div class="node-icon">
-                                    C
+                            <div class="network-concept" aria-hidden="true">
+                                <div class="network-node network-citizen">
+                                    <span class="network-node-symbol">01</span>
+                                    <span>Citizen</span>
                                 </div>
 
-                                <span>
-                                    Citizen
-                                </span>
+                                <div class="network-connector connector-left"></div>
+                                <div class="network-connector connector-right"></div>
 
-                            </div>
-
-
-                            <div class="network-node volunteer-node">
-
-                                <div class="node-icon">
-                                    V
+                                <div class="network-node network-center">
+                                    <span class="network-center-symbol">↔</span>
+                                    <span>Coordination</span>
                                 </div>
 
-                                <span>
-                                    Volunteer
-                                </span>
-
-                            </div>
-
-
-                            <div class="network-node authority-node">
-
-                                <div class="node-icon">
-                                    A
+                                <div class="network-node network-authority">
+                                    <span class="network-node-symbol">03</span>
+                                    <span>Authority</span>
                                 </div>
 
-                                <span>
-                                    Authority
-                                </span>
-
-                            </div>
-
-
-                            <div class="esmitra-core">
-
-                                <div class="core-ring"></div>
-
-                                <div class="core-logo">
-                                    E
+                                <div class="network-node network-volunteer">
+                                    <span class="network-node-symbol">02</span>
+                                    <span>Volunteer</span>
                                 </div>
-
-                                <strong>
-                                    ESMITRA
-                                </strong>
-
-                                <span>
-                                    Connected Response
-                                </span>
-
                             </div>
 
-
-                            <div class="incident-pill incident-1">
-                                <span class="status-dot"></span>
-                                Incident Reported
-                            </div>
-
-
-                            <div class="incident-pill incident-2">
-                                <span class="status-dot"></span>
-                                Response Assigned
-                            </div>
-
-
-                            <div class="incident-pill incident-3">
-                                <span class="status-dot"></span>
-                                Issue Resolved
-                            </div>
-
-
-                            <div class="visual-caption">
-                                CITIZEN → CONNECT → RESPOND → RESOLVE
-                            </div>
-
+                            <span class="project-category">CIVIC TECHNOLOGY</span>
                         </div>
 
-
-                        <div class="project-info">
-
-                            <div class="project-meta">
-                                <span>PROJECT / 01</span>
-                                <span>INCIDENT RESPONSE</span>
-                            </div>
-
-
+                        <div class="project-content">
                             <div class="project-title-row">
-
-                                <div>
-
-                                    <h3>
-                                        ESMITRA
-                                    </h3>
-
-                                    <h4>
-                                        Smart Incident Response
-                                    </h4>
-
-                                </div>
-
-
-                                <a
-                                    href="https://sentinel-link-orpin.vercel.app"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    class="arrow-button"
-                                    aria-label="Open ESMITRA"
-                                >
-                                    ↗
-                                </a>
-
+                                <h3>ESMITRA</h3>
+                                <span class="project-status">
+                                    <span class="status-dot" aria-hidden="true"></span>
+                                    In development
+                                </span>
                             </div>
-
 
                             <p>
-                                A smart incident reporting and management
-                                platform designed to connect citizens,
-                                volunteers, and authorities through one
-                                digital response network. Instead of
-                                fragmented calls, messages, and paper
-                                records, ESMITRA creates a connected flow
-                                from reporting an incident to resolving it.
+                                A project exploring how citizens, volunteers,
+                                and authorities could communicate and coordinate
+                                around community issues.
                             </p>
 
-
-                            <div class="project-process">
-
-                                <span>REPORT</span>
-                                <b>→</b>
-
-                                <span>CONNECT</span>
-                                <b>→</b>
-
-                                <span>RESPOND</span>
-                                <b>→</b>
-
-                                <span>RESOLVE</span>
-
+                            <div class="project-tags">
+                                <span>Web</span>
+                                <span>Communication</span>
+                                <span>Community</span>
                             </div>
 
-
-                            <div class="project-bottom">
-
-                                <div class="tags">
-
-                                    <span>HTML</span>
-                                    <span>CSS</span>
-                                    <span>JavaScript</span>
-                                    <span>Firebase</span>
-                                    <span>Vercel</span>
-
-                                </div>
-
-
-                                <a
-                                    href="https://sentinel-link-orpin.vercel.app"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    class="project-link"
-                                >
-                                    VIEW PROJECT ↗
-                                </a>
-
-                            </div>
-
+                            <a
+                                class="project-link"
+                                href="https://sentinel-link-orpin.vercel.app"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Visit project <span aria-hidden="true">↗</span>
+                            </a>
                         </div>
 
                     </article>
 
+                    <!-- Chess engine: image placeholder intentionally not rendered -->
+                    <article class="project-card">
 
-                    <!-- CHESS ENGINE -->
+                        <div class="project-visual project-visual-chess">
+                            <!-- Future asset placeholder:
+                                 assets/images/projects/chess-engine-preview.png
+                                 Do not display until a genuine preview is available. -->
 
-                    <article class="project reveal">
+                            <div class="chess-concept" aria-hidden="true">
+                                <div class="chess-board">
+                                    <span>♜</span><span>♞</span><span>♝</span><span>♛</span>
+                                    <span>♚</span><span>♝</span><span>♞</span><span>♜</span>
 
-                        <div class="project-visual chess-visual">
+                                    <span>♟</span><span>♟</span><span>♟</span><span>♟</span>
+                                    <span>♟</span><span>♟</span><span>♟</span><span>♟</span>
 
-                            <div class="chess-interface">
+                                    <span></span><span></span><span></span><span></span>
+                                    <span></span><span></span><span></span><span></span>
 
-                                <div class="board-wrapper">
+                                    <span></span><span></span><span></span><span></span>
+                                    <span></span><span></span><span></span><span></span>
 
-                                    <div class="chess-board">
+                                    <span></span><span></span><span></span><span></span>
+                                    <span></span><span></span><span></span><span></span>
 
-                                        <div>♜</div>
-                                        <div>♞</div>
-                                        <div>♝</div>
-                                        <div>♛</div>
-                                        <div>♚</div>
-                                        <div>♝</div>
-                                        <div>♞</div>
-                                        <div>♜</div>
+                                    <span></span><span></span><span></span><span></span>
+                                    <span></span><span></span><span></span><span></span>
 
-                                        <div>♟</div>
-                                        <div>♟</div>
-                                        <div>♟</div>
-                                        <div>♟</div>
-                                        <div>♟</div>
-                                        <div>♟</div>
-                                        <div>♟</div>
-                                        <div>♟</div>
+                                    <span>♙</span><span>♙</span><span>♙</span><span>♙</span>
+                                    <span>♙</span><span>♙</span><span>♙</span><span>♙</span>
 
-                                        <div></div>
-                                        <div></div>
-                                        <div></div>
-                                        <div></div>
-                                        <div></div>
-                                        <div></div>
-                                        <div></div>
-                                        <div></div>
-
-                                        <div></div>
-                                        <div></div>
-                                        <div></div>
-                                        <div></div>
-                                        <div></div>
-                                        <div></div>
-                                        <div></div>
-                                        <div></div>
-
-                                        <div></div>
-                                        <div></div>
-                                        <div></div>
-                                        <div></div>
-                                        <div></div>
-                                        <div></div>
-                                        <div></div>
-                                        <div></div>
-
-                                        <div></div>
-                                        <div></div>
-                                        <div></div>
-                                        <div></div>
-                                        <div></div>
-                                        <div></div>
-                                        <div></div>
-                                        <div></div>
-
-                                        <div>♙</div>
-                                        <div>♙</div>
-                                        <div>♙</div>
-                                        <div>♙</div>
-                                        <div>♙</div>
-                                        <div>♙</div>
-                                        <div>♙</div>
-                                        <div>♙</div>
-
-                                        <div>♖</div>
-                                        <div>♘</div>
-                                        <div>♗</div>
-                                        <div>♕</div>
-                                        <div>♔</div>
-                                        <div>♗</div>
-                                        <div>♘</div>
-                                        <div>♖</div>
-
-                                    </div>
-
+                                    <span>♖</span><span>♘</span><span>♗</span><span>♕</span>
+                                    <span>♔</span><span>♗</span><span>♘</span><span>♖</span>
                                 </div>
 
-
-                                <div class="engine-panel">
-
-                                    <div class="engine-title">
-
-                                        <small>
-                                            BROWSER ENGINE
-                                        </small>
-
-                                        <strong>
-                                            Chess Engine
-                                        </strong>
-
-                                    </div>
-
-
-                                    <div class="engine-stat">
-
-                                        <span>
-                                            DEPTH
-                                        </span>
-
-                                        <b>
-                                            08
-                                        </b>
-
-                                    </div>
-
-
-                                    <div class="engine-stat">
-
-                                        <span>
-                                            NODES
-                                        </span>
-
-                                        <b>
-                                            124K
-                                        </b>
-
-                                    </div>
-
-
-                                    <div class="engine-stat">
-
-                                        <span>
-                                            EVAL
-                                        </span>
-
-                                        <b>
-                                            +0.42
-                                        </b>
-
-                                    </div>
-
-
-                                    <div class="engine-line"></div>
-
-
-                                    <div class="engine-status">
-
-                                        <span></span>
-
-                                        SEARCHING
-
-                                    </div>
-
+                                <div class="chess-side-panel">
+                                    <span class="panel-label">PROJECT</span>
+                                    <strong>Chess Engine</strong>
+                                    <span class="panel-divider"></span>
+                                    <span class="panel-label">FOCUS</span>
+                                    <span class="panel-value">Move generation</span>
+                                    <span class="panel-value">Game logic</span>
+                                    <span class="panel-value">Testing</span>
                                 </div>
-
                             </div>
 
-
-                            <div class="visual-caption">
-                                MOVE GENERATION • SEARCH • EVALUATION
-                            </div>
-
+                            <span class="project-category">PROGRAMMING</span>
                         </div>
 
-
-                        <div class="project-info">
-
-                            <div class="project-meta">
-                                <span>PROJECT / 02</span>
-                                <span>ALGORITHMIC SYSTEM</span>
-                            </div>
-
-
+                        <div class="project-content">
                             <div class="project-title-row">
-
-                                <div>
-
-                                    <h3>
-                                        Chess Engine
-                                    </h3>
-
-                                    <h4>
-                                        Browser-Based Chess Engine
-                                    </h4>
-
-                                </div>
-
-
-                                <a
-                                    href="https://github.com/Adityaislary11"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    class="arrow-button"
-                                    aria-label="Open GitHub"
-                                >
-                                    ↗
-                                </a>
-
+                                <h3>Chess Engine</h3>
+                                <span class="project-status">
+                                    <span class="status-dot" aria-hidden="true"></span>
+                                    In development
+                                </span>
                             </div>
-
 
                             <p>
-                                A browser-based chess project focused on
-                                understanding how chess engines work under
-                                the hood. The project explores board
-                                representation, legal move generation,
-                                search, evaluation, and engine decision
-                                making.
+                                An ongoing programming project focused on chess
+                                rules, move generation, board representation,
+                                and engine logic.
                             </p>
 
-
-                            <div class="project-process">
-
-                                <span>POSITION</span>
-                                <b>→</b>
-
-                                <span>MOVES</span>
-                                <b>→</b>
-
-                                <span>SEARCH</span>
-                                <b>→</b>
-
-                                <span>EVALUATE</span>
-
+                            <div class="project-tags">
+                                <span>JavaScript</span>
+                                <span>Algorithms</span>
+                                <span>Chess</span>
                             </div>
 
-
-                            <div class="project-bottom">
-
-                                <div class="tags">
-
-                                    <span>JavaScript</span>
-                                    <span>chess.js</span>
-                                    <span>Algorithms</span>
-                                    <span>Search</span>
-
-                                </div>
-
-
-                                <a
-                                    href="https://github.com/Adityaislary11"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    class="project-link"
-                                >
-                                    GITHUB ↗
-                                </a>
-
-                            </div>
-
+                            <span class="project-link project-link-disabled">
+                                Project details coming later
+                            </span>
                         </div>
 
                     </article>
 
                 </div>
-
             </div>
-
         </section>
 
-
-        <!-- ================================
-             ACHIEVEMENTS
-        ================================= -->
-
-        <section
-            class="section achievements"
-            id="achievements"
-        >
-
+        <!-- Milestones -->
+        <section class="section milestones-section" id="milestones">
             <div class="container">
 
-                <div class="section-intro reveal">
-
-                    <span class="section-index">
-                        04
-                    </span>
-
-                    <div>
-
-                        <p class="eyebrow">
-                            RECOGNITION
-                        </p>
-
-                        <h2>
-                            Achievements.
-                        </h2>
-
-                    </div>
-
+                <div class="section-heading">
+                    <p class="section-label">04 / PROGRESS</p>
+                    <h2>Learning through projects.</h2>
+                    <p class="section-description">
+                        Practical milestones, not a list of invented awards.
+                    </p>
                 </div>
 
+                <div class="milestones-list">
 
-                <div class="achievement reveal">
+                    <article class="milestone-item">
+                        <span class="milestone-marker" aria-hidden="true"></span>
+                        <div class="milestone-content">
+                            <span class="milestone-type">WEB PROJECT</span>
+                            <h3>Working on ESMITRA</h3>
+                            <p>
+                                Exploring the development of a web-based civic
+                                communication project.
+                            </p>
+                        </div>
+                    </article>
 
-                    <span class="achievement-number">
-                        01
-                    </span>
+                    <article class="milestone-item">
+                        <span class="milestone-marker" aria-hidden="true"></span>
+                        <div class="milestone-content">
+                            <span class="milestone-type">PROGRAMMING</span>
+                            <h3>Developing a chess engine</h3>
+                            <p>
+                                Learning how game rules, board representation,
+                                and move generation fit together.
+                            </p>
+                        </div>
+                    </article>
 
-                    <div>
-
-                        <p>
-                            REGIONAL JIGNYASA 2025–26
-                        </p>
-
-                        <h3>
-                            2nd Place
-                        </h3>
-
-                        <span>
-                            November 25–26, 2025
-                        </span>
-
-                    </div>
-
-                    <span class="achievement-type">
-                        REGIONAL
-                    </span>
-
-                </div>
-
-
-                <div class="achievement reveal">
-
-                    <span class="achievement-number">
-                        02
-                    </span>
-
-                    <div>
-
-                        <p>
-                            REGIONAL ANVESHANA 2025–26
-                        </p>
-
-                        <h3>
-                            3rd Place
-                        </h3>
-
-                        <span>
-                            February 2026
-                        </span>
-
-                    </div>
-
-                    <span class="achievement-type">
-                        REGIONAL
-                    </span>
+                    <article class="milestone-item">
+                        <span class="milestone-marker" aria-hidden="true"></span>
+                        <div class="milestone-content">
+                            <span class="milestone-type">CONTINUOUS LEARNING</span>
+                            <h3>Exploring software and AI</h3>
+                            <p>
+                                Experimenting with programming concepts and
+                                building projects to strengthen practical skills.
+                            </p>
+                        </div>
+                    </article>
 
                 </div>
-
             </div>
-
         </section>
 
-
-        <!-- ================================
-             TECHNOLOGY STACK
-        ================================= -->
-
-        <section class="section" id="stack">
-
+        <!-- Tech Stack -->
+        <section class="section stack-section" id="stack">
             <div class="container">
 
-                <div class="section-intro reveal">
-
-                    <span class="section-index">
-                        05
-                    </span>
-
-                    <div>
-
-                        <p class="eyebrow">
-                            TECHNOLOGY
-                        </p>
-
-                        <h2>
-                            Stack.
-                        </h2>
-
-                    </div>
-
+                <div class="section-heading">
+                    <p class="section-label">05 / TOOLKIT</p>
+                    <h2>Tools I use.</h2>
+                    <p class="section-description">
+                        Technologies and tools I work with or explore.
+                    </p>
                 </div>
 
-
-                <div class="stack-grid reveal">
-
-                    <div>
-                        <strong>HTML</strong>
-                        <span>STRUCTURE</span>
-                    </div>
-
-                    <div>
-                        <strong>CSS</strong>
-                        <span>INTERFACE</span>
-                    </div>
-
-                    <div>
-                        <strong>JavaScript</strong>
-                        <span>LOGIC</span>
-                    </div>
-
-                    <div>
-                        <strong>Firebase</strong>
-                        <span>AUTHENTICATION</span>
-                    </div>
-
-                    <div>
-                        <strong>GitHub</strong>
-                        <span>VERSION CONTROL</span>
-                    </div>
-
-                    <div>
-                        <strong>Vercel</strong>
-                        <span>DEPLOYMENT</span>
-                    </div>
-
+                <div class="stack-grid" aria-label="Technologies and tools">
+                    <span class="stack-item">HTML</span>
+                    <span class="stack-item">CSS</span>
+                    <span class="stack-item">JavaScript</span>
+                    <span class="stack-item">Python</span>
+                    <span class="stack-item">NumPy</span>
+                    <span class="stack-item">Git</span>
+                    <span class="stack-item">GitHub</span>
                 </div>
 
             </div>
-
         </section>
 
-
-        <!-- ================================
-             CONTACT
-        ================================= -->
-
-        <section
-            class="section contact-section"
-            id="contact"
-        >
-
+        <!-- Contact -->
+        <section class="section contact-section" id="contact">
             <div class="container">
 
-                <div class="contact-box reveal">
+                <div class="contact-card">
+                    <p class="section-label">06 / CONTACT</p>
 
-                    <div>
+                    <h2>Have an idea or a project in mind?</h2>
 
-                        <p class="eyebrow">
-                            LET'S CONNECT
-                        </p>
+                    <p class="contact-description">
+                        I'm open to discussing suitable freelance work,
+                        project ideas, and opportunities to learn and collaborate.
+                    </p>
 
-                        <h2>
-                            Have an idea?
-                            <em>Let's build it.</em>
-                        </h2>
+                    <div class="contact-actions">
+                        <a
+                            class="button button-primary"
+                            href="mailto:adityaislary11@gmail.com"
+                        >
+                            Send me an email
+                            <span aria-hidden="true">↗</span>
+                        </a>
 
-                        <p>
-                            For projects, collaboration, or freelance
-                            opportunities, feel free to reach out.
-                        </p>
-
+                        <a
+                            class="button button-secondary"
+                            href="https://github.com/Adityaislary11"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Find me on GitHub
+                            <span aria-hidden="true">↗</span>
+                        </a>
                     </div>
 
-
-                   <a
-    href="https://mail.google.com/mail/?view=cm&fs=1&to=adityaislary11@gmail.com&su=Portfolio%20Contact"
-    target="_blank"
-    rel="noopener noreferrer"
->
-    Contact Me
-                   </a>
+                    <p class="contact-email">adityaislary11@gmail.com</p>
                 </div>
 
             </div>
-
         </section>
 
     </main>
 
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-content">
 
-    <!-- ================================
-         FOOTER
-    ================================= -->
+            <a class="footer-brand" href="#home">Aditya Islary</a>
 
-    <footer class="footer">
+            <p>
+                Student freelancer, learning and building one project at a time.
+            </p>
 
-        <div class="container">
+            <a
+                class="footer-github"
+                href="https://github.com/Adityaislary11"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit Aditya Islary on GitHub"
+            >
+                GitHub ↗
+            </a>
 
-            <div class="footer-inner">
-
-                <div class="footer-brand">
-
-                    <a href="#home" class="brand">
-
-                        <span class="brand-icon">
-                            AI
-                        </span>
-
-                        <span>
-                            Aditya Islary
-                        </span>
-
-                    </a>
-
-                    <p>
-                        Student freelancer building and learning.
-                    </p>
-
-                </div>
-
-
-                <div class="footer-links">
-
-                    <a href="#about">
-                        About
-                    </a>
-
-                    <a href="#projects">
-                        Projects
-                    </a>
-
-                    <a href="#achievements">
-                        Achievements
-                    </a>
-
-                    <a
-                        href="https://github.com/Adityaislary11"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        GitHub
-                    </a>
-
-                  
-<a
-    href="https://mail.google.com/mail/?view=cm&fs=1&to=adityaislary11@gmail.com&su=Portfolio%20Contact"
-    target="_blank"
-    rel="noopener noreferrer"
->
-    Contact Me
-</a>
-                </div>
-
-            </div>
-
-
-            <div class="footer-bottom">
-
-                <span>
-                    © <span id="year"></span> Aditya Islary
-                </span>
-
-                <span>
-                    BUILT WITH HTML • CSS • JAVASCRIPT
-                </span>
-
-            </div>
+            <span class="footer-copyright">
+                © <span id="currentYear">2026</span> Aditya Islary
+            </span>
 
         </div>
-
     </footer>
-
-
-    <script src="app.js"></script>
 
 </body>
 </html>
